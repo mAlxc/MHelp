@@ -3,6 +3,7 @@
     <v-navigation-drawer
       v-model="drawer"
       app
+      temporary
     >
       <v-list dense>
         <v-list-tile v-for="elm in menu" :key="'m_'+elm.name" @click="goTo(elm.name)">
@@ -34,6 +35,7 @@
 const menu = [
   {name: 'home', icon: 'home', label: 'Home'},
   {name: 'about', icon: 'help_outline', label: 'A propos'},
+  {name: 'chimie', icon: 'invert_colors', label: 'Chimie'},
   {name: 'config', icon: 'settings', label: 'Configs'}
 ]
 export default {
@@ -46,7 +48,7 @@ export default {
   },
   methods: {
     goTo (item, event) {
-      console.log(item, event)
+      this.$router.push({name: item})
     }
   }
 }
