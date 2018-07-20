@@ -13,8 +13,8 @@ export default new Router({
       component: HelloWorld // elemnt afficehr au sein du router view
     },
     {
-      path: '/Chimmie',
-      name: 'chimie',
+      path: '/periodic',
+      name: 'periodic',
       component: Periodic // elemnt afficehr au sein du router view
     },
     {

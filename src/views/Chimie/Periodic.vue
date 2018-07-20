@@ -1,6 +1,7 @@
 <template>
     <v-layout column>
       <v-flex>
+        <span>Tier par ?</span>
         <v-select
         :items="tri"
         v-model="choice"
@@ -21,7 +22,7 @@
                     <v-expansion-panel-content v-for="subItem in item.items" :key="index + '_' + subItem.fields.symbol">
                       <span slot="header">{{subItem.fields.name}}</span>
                       <v-card>
-                        {{subItem.fields.symbol}}
+                        {{subItem.fields}}
                       </v-card>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
@@ -31,7 +32,7 @@
               <v-expansion-panel-content v-for="item in periodiqTableSort" :key="item.fields.symbol">
                 <span slot="header">{{item.fields.name}}</span>
                 <v-card>
-                  {{item.fields.symbol}}
+                  {{item.fields}}
                 </v-card>
               </v-expansion-panel-content>
             </v-expansion-panel>
@@ -50,9 +51,11 @@ export default {
         return a.fields.atomicnumber - b.fields.atomicnumber
       }),
       tri: [
-        {label: 'Atomic Order', list: 'periodiqTable', property: 'atomicnumber', type: 'number'},
-        {label: 'Standar State', list: 'periodiqTable', property: 'standardstate', type: 'group'},
-        {label: 'Group', list: 'periodiqTable', property: 'groupblock', type: 'group'}],
+        {label: 'Atomic Order', property: 'atomicnumber', type: 'number'},
+        {label: 'point de fusion', property: 'boilingpoint', type: 'number'},
+        {label: 'Standar State', property: 'standardstate', type: 'group'},
+        {label: 'Type de liaison', property: 'bondingtype', type: 'group'},
+        {label: 'Group', property: 'groupblock', type: 'group'}],
       choice: {label: 'Atomic Order', list: 'periodiqTable', property: 'atomicnumber', type: 'number'}
     }
   },

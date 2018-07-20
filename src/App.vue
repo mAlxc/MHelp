@@ -36,6 +36,7 @@ const menu = [
   {name: 'home', icon: 'home', label: 'Home'},
   {name: 'about', icon: 'help_outline', label: 'A propos'},
   {name: 'chimie', icon: 'invert_colors', label: 'Chimie'},
+  {name: 'periodic', icon: 'invert_colors', label: 'Chimie Elements'},
   {name: 'config', icon: 'settings', label: 'Configs'}
 ]
 export default {
