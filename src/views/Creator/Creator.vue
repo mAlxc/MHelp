@@ -131,6 +131,9 @@ export default {
     saveFiche () {
       this.editable = !this.editable
       if (!this.editable) {
+        this.datas.parts.forEach((partie, i) => {
+          partie.id = i
+        })
         let model = {
           title: this.datas.title,
           matiere: this.datas.matiere,
