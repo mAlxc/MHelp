@@ -1,22 +1,37 @@
 <template>
-    <v-layout mx-3 fill-height justify-start column>
-        <v-flex row fluid>
-          <v-layout>
-            <v-flex>
-              <v-text-field v-model="datas.title"></v-text-field>
+    <v-layout mt-2 align-start justify-start column fill-height>
+        <v-flex ml-4>
+          <v-layout align-baseline justify-space-between row>
+            <v-flex mr-3>
+              <v-text-field placeholder="Nouvelle Fiche" class="display-1" single-line hide-details color="primary"  v-model="datas.title" :readonly="!editable"></v-text-field>
             </v-flex>
             <v-flex>
               <v-btn @click="saveFiche" small icon flat>
-                <v-icon>{{icon}}</v-icon>
+                <v-icon >{{icon}}</v-icon>
               </v-btn>
             </v-flex>
           </v-layout>
         </v-flex>
-        <template v-for="(part,i) in datas.parts">
-          <a-chapitre :key="'partie' + i" v-if="part.type === 'chapitre'" :editable="editable" :text.sync="part.content"></a-chapitre>
-          <a-sub-heading :key="'partie' + i" v-else-if="part.type === 'subHeading'" :editable="editable" :text.sync="part.content"></a-sub-heading>
-        </template>
-        <v-flex >
+        <v-flex mb-2>
+          <v-layout align-start justify-space-between row fill-height  v-for="(part,i) in datas.parts" :key="'partie' + i">
+            <v-flex ml-3 mt-1 v-if="part.type === 'chapitre'">
+              <a-chapitre :editable="editable" :text.sync="part.content">
+              </a-chapitre>
+            </v-flex>
+            <v-flex ml-5 mt-3 v-else-if="part.type === 'subHeading'">
+              <a-sub-heading :editable="editable" :text.sync="part.content">
+              </a-sub-heading>
+            </v-flex>
+            <v-flex mx-4 mt-4 v-else-if="part.type === 'definition'">
+              <a-definition :editable="editable" :text.sync="part.content.text" :defName.sync="part.content.defName">
+              </a-definition>
+            </v-flex>
+            <v-flex v-if="editable">
+              <v-btn icon @click="deletePart(part.id)"><v-icon>close</v-icon></v-btn>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+        <v-flex v-if="editable">
           <v-menu bottom origin="center center" v-model="dialOpen" offset-x transition="scale-transition">
             <v-btn slot="activator" color="primary" small round>
               Ajouter
@@ -35,12 +50,13 @@
 <script>
 import AChapitre from '@/components/Creator/AChapitre'
 import ASubHeading from '@/components/Creator/ASubTitle'
+import ADefinition from '@/components/Creator/ADefinition'
 
 let exempleFiche = {
-  title: 'Nouvelle Fiche',
+  title: '',
   matiere: 'chimie',
   parts: [
-    {type: 'subHeading', content: 'Introduction'}
+    {type: 'subHeading', content: 'Introduction', id: 0}
   ]
 }
 export default {
@@ -48,14 +64,22 @@ export default {
     return {
       matiere: 'chimie',
       dialOpen: false,
-      items: [{label: 'Sous Titre', val: 'subHeading'}, {label: 'Chapitre', val: 'chapitre'}, {label: 'Image', val: ''}],
+      items: [{label: 'Sous Titre', val: 'subHeading'}, {label: 'Définition', val: 'definition'}, {label: 'Chapitre', val: 'chapitre'}, {label: 'Image', val: ''}],
       datas: {},
-      editable: true
+      editable: false
     }
   },
   computed: {
     icon () {
       return this.editable ? 'save' : 'border_color'
+    },
+    lastId () {
+      console.log(this.datas.parts.length)
+      if (this.datas.parts.length > 0) {
+        return this.datas.parts[this.datas.parts.length - 1].id
+      } else {
+        return -1
+      }
     }
   },
   created () {
@@ -79,7 +103,14 @@ export default {
       let base = {
         type: elem.val,
         content: '',
-        isModif: true
+        id: this.lastId + 1
+      }
+      switch (elem.val) {
+        case 'definition':
+          base.content = {defName: '', text: ''}
+          break
+        default:
+          break
       }
       this.datas.parts.push(base)
     },
@@ -87,9 +118,15 @@ export default {
       this.$getItem(name, (error, result) => {
         if (!error) {
           console.log(result)
-          this.datas = result
+          if (result) {
+            this.datas = result
+          }
         }
       })
+    },
+    deletePart (id) {
+      console.log(this.datas.parts)
+      this.datas.parts = this.datas.parts.filter(obj => obj.id !== id)
     },
     saveFiche () {
       this.editable = !this.editable
@@ -107,6 +144,6 @@ export default {
       }
     }
   },
-  components: {AChapitre, ASubHeading}
+  components: {AChapitre, ASubHeading, ADefinition}
 }
 </script>

@@ -4,6 +4,8 @@
       v-model="drawer"
       app
       temporary
+      clipped
+      class="primaryBack"
     >
       <v-list dense>
         <v-list-tile v-for="elm in menu" :key="'m_'+elm.name" @click="goTo(elm)">
@@ -16,16 +18,16 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app fixed clipped-left>
+    <v-toolbar class="primaryBack" app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
-    <v-content >
-      <v-container pa-0 fluid fill-height>
+    <v-content class="mainContent">
+      <v-container  pa-0 fluid>
         <router-view></router-view>
       </v-container>
     </v-content>
-    <v-footer app fixed>
+    <v-footer class="primaryBack" app fixed>
       <span>&copy; 2018 AlxcM</span>
     </v-footer>
   </v-app>
@@ -68,5 +70,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+.mainContent{
+  background-color: rgb(185, 190, 196);
+}
+
+.primaryBack{
+  background-color:rgb(80, 160, 252) !important;
 }
 </style>

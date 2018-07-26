@@ -1,11 +1,9 @@
 <template>
-  <v-container pa-0>
-    <v-layout ml-0 align-center justify-space-between>
-      <v-flex >
-        <v-text-field outline single-line class="subheading" :readonly="!editable" v-model="contentInternal">       </v-text-field>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-layout>
+    <v-flex >
+      <v-text-field :full-width="!editable" hide-details single-line class="subheading text--red" :readonly="!editable" v-model="contentInternal"></v-text-field>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
@@ -32,3 +30,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.subTitleContainer{
+  border-style: solid;
+}
+</style>

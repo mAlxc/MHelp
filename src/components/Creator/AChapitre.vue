@@ -2,7 +2,7 @@
   <v-container pa-0 >
     <v-layout ml-0 align-center justify-space-between>
       <v-flex >
-        <v-textarea hide-details flat auto-grow rows="1" class="body-1" :readonly="!editable" v-model="contentInternal">
+        <v-textarea :full-width="!editable" placeholder="Zone de texte vous pouvez ecrire ce que vous voulez" hide-details flat auto-grow rows="1" class="body-1" :readonly="!editable" v-model="contentInternal">
         </v-textarea>
       </v-flex>
     </v-layout>
