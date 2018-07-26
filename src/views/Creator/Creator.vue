@@ -133,9 +133,11 @@ export default {
       this.datas.parts = this.datas.parts.filter(obj => obj.id !== id)
     },
     saveFiche () {
-      this.editable = !this.editable
-      if (!this.editable) {
+      if (this.editable) {
         this.errors = []
+        if (this.datas.title === '') {
+          this.errors.push({id: -1, type: 'Empty Tilte'})
+        }
         this.datas.parts.forEach((partie, i) => {
           partie.id = i
           if (partie.type === 'definition') {
@@ -153,6 +155,7 @@ export default {
         }
         console.log(model)
         if (this.errors.length === 0) {
+          this.editable = !this.editable
           this.$setItem('fiche_' + this.datas.title.trim(), model, function (err, res) {
             if (err) {
               console.error(err)
@@ -160,6 +163,8 @@ export default {
             console.info('SaveInbase')
           })
         }
+      } else {
+        this.editable = true
       }
     }
   },

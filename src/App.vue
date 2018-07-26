@@ -78,4 +78,8 @@ export default {
 .primaryBack{
   background-color:rgb(80, 160, 252) !important;
 }
+
+.textBold input{
+  font-style: italic !important;
+}
 </style>
