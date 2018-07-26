@@ -12,6 +12,9 @@
             </v-flex>
           </v-layout>
         </v-flex>
+        <v-flex v-if="errors.length >0">
+          <span v-for="(err, i) in errors" :key="'err'+i" >{{err}}</span>
+        </v-flex>
         <v-flex mb-2>
           <v-layout align-start justify-space-between row fill-height  v-for="(part,i) in datas.parts" :key="'partie' + i">
             <v-flex ml-3 mt-1 v-if="part.type === 'chapitre'">
@@ -66,7 +69,8 @@ export default {
       dialOpen: false,
       items: [{label: 'Sous Titre', val: 'subHeading'}, {label: 'Définition', val: 'definition'}, {label: 'Chapitre', val: 'chapitre'}, {label: 'Image', val: ''}],
       datas: {},
-      editable: false
+      editable: false,
+      errors: []
     }
   },
   computed: {
@@ -131,19 +135,31 @@ export default {
     saveFiche () {
       this.editable = !this.editable
       if (!this.editable) {
+        this.errors = []
         this.datas.parts.forEach((partie, i) => {
           partie.id = i
+          if (partie.type === 'definition') {
+            if (partie.content.defName === '' || partie.content.text === '') {
+              this.errors.push({id: partie.id, type: 'empty'})
+            }
+          } else if (partie.content === '') {
+            this.errors.push({id: partie.id, type: 'empty'})
+          }
         })
         let model = {
           title: this.datas.title,
           matiere: this.datas.matiere,
           parts: this.datas.parts
         }
-
         console.log(model)
-        this.$setItem('fiche_' + this.datas.title.trim(), model, function (err, res) {
-          console.log(err, res)
-        })
+        if (this.errors.length === 0) {
+          this.$setItem('fiche_' + this.datas.title.trim(), model, function (err, res) {
+            if (err) {
+              console.error(err)
+            }
+            console.info('SaveInbase')
+          })
+        }
       }
     }
   },
