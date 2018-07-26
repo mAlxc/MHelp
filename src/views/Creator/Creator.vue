@@ -3,7 +3,8 @@
         <v-flex ml-4>
           <v-layout align-baseline justify-space-between row>
             <v-flex mr-3>
-              <v-text-field placeholder="Nouvelle Fiche" class="display-1" single-line hide-details color="primary"  v-model="datas.title" :readonly="!editable"></v-text-field>
+              <v-text-field v-if="editable" placeholder="Nouvelle Fiche" class="display-1" single-line hide-details color="primary"  v-model="datas.title" :readonly="!editable"></v-text-field>
+              <h1 v-else class="Title">{{datas.title}}</h1>
             </v-flex>
             <v-flex>
               <v-btn @click="saveFiche" small icon flat>
@@ -17,7 +18,7 @@
         </v-flex>
         <v-flex mb-2>
           <v-layout align-start justify-space-between row fill-height  v-for="(part,i) in datas.parts" :key="'partie' + i">
-            <v-flex ml-3 mt-1 v-if="part.type === 'chapitre'">
+            <v-flex ml-3 mt-3 v-if="part.type === 'chapitre'">
               <a-chapitre :editable="editable" :text.sync="part.content">
               </a-chapitre>
             </v-flex>
@@ -25,7 +26,7 @@
               <a-sub-heading :editable="editable" :text.sync="part.content">
               </a-sub-heading>
             </v-flex>
-            <v-flex mx-4 mt-4 v-else-if="part.type === 'definition'">
+            <v-flex mx-4 mt-3 v-else-if="part.type === 'definition'">
               <a-definition :editable="editable" :text.sync="part.content.text" :defName.sync="part.content.defName">
               </a-definition>
             </v-flex>
@@ -34,7 +35,7 @@
             </v-flex>
           </v-layout>
         </v-flex>
-        <v-flex v-if="editable">
+        <v-flex fluid align-center v-if="editable">
           <v-menu bottom origin="center center" v-model="dialOpen" offset-x transition="scale-transition">
             <v-btn slot="activator" color="primary" small round>
               Ajouter
@@ -67,7 +68,11 @@ export default {
     return {
       matiere: 'chimie',
       dialOpen: false,
-      items: [{label: 'Sous Titre', val: 'subHeading'}, {label: 'Définition', val: 'definition'}, {label: 'Chapitre', val: 'chapitre'}, {label: 'Image', val: ''}],
+      items: [
+        {label: 'Sous Titre', val: 'subHeading'},
+        {label: 'Définition', val: 'definition'},
+        {label: 'Chapitre', val: 'chapitre'},
+        {label: 'Image', val: 'chapitre'}],
       datas: {},
       editable: false,
       errors: []

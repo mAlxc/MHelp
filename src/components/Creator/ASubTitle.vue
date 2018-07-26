@@ -1,7 +1,8 @@
 <template>
   <v-layout>
     <v-flex >
-      <v-text-field :full-width="!editable" hide-details single-line class="textBold title text--red " :readonly="!editable" v-model="contentInternal"></v-text-field>
+      <v-text-field v-if="editable"  :full-width="!editable" hide-details single-line class="title "  v-model="contentInternal"></v-text-field>
+      <h2 v-else  class="subTitle title">{{contentInternal}}</h2>
     </v-flex>
   </v-layout>
 </template>

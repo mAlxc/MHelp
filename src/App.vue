@@ -79,7 +79,19 @@ export default {
   background-color:rgb(80, 160, 252) !important;
 }
 
-.textBold input{
+.subTitle{
   font-style: italic !important;
+  text-decoration: underline;
+  text-decoration-color:rgb(80, 160, 252);
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.Title{
+  font-style: italic !important;
+  text-decoration: underline;
+  text-decoration-color:rgb(80, 160, 252);
+  word-wrap: break-word;
+  text-align: center;
 }
 </style>
