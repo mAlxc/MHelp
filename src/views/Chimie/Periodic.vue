@@ -35,7 +35,7 @@
           <v-flex>
               <v-card v-for="content in aAffficher" :key="content.fields.name">
                 <v-card-title primary-title>
-                  {{content.fields.name}}
+                  {{content.fields.name}} {{content.fields.atomicnumber}}
                 </v-card-title>
                 <v-card-text>
                   <v-layout column>
@@ -44,15 +44,15 @@
                         <v-flex >
                           Symbol: {{content.fields.symbol}}
                         </v-flex>
-                        <v-flex v-if="content.fields.groupblock">
-                          {{content.fields.groupblock}}
+                        <v-flex v-if="content.fields.standardstate">
+                          State: {{content.fields.standardstate}}
                         </v-flex>
                       </v-layout>
                     </v-flex>
                     <v-flex>
                       <v-layout mt-1>
                         <v-flex >
-                          Symbol: {{content.fields.symbol}}
+                          Rayon ionique: {{content.fields.ionradius}}
                         </v-flex>
                         <v-flex v-if="content.fields.boilingpoint">
                           point d'ebulition: {{content.fields.boilingpoint}}°

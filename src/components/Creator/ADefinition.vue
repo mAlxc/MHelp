@@ -1,6 +1,6 @@
 <template>
   <v-layout class="definitionContainer" ma-0 column justify-space-between>
-    <v-flex pa-0>
+    <v-flex pa-1>
       <v-text-field :full-width="!editable" hide-details placeholder="Mot à définir" single-line class="title" :readonly="!editable" v-model="defNameInternal"></v-text-field>
     </v-flex>
     <v-flex pa-0 mt-1 ml-4>
@@ -48,5 +48,6 @@ export default {
   border-width: thin;
   border-radius: 15px;
   border-left-width: thick;
+  filter: sepia(80%)
 }
 </style>
