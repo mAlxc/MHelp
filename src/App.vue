@@ -27,7 +27,7 @@
         <router-view></router-view>
       </v-container>
     </v-content>
-    <v-footer class="primaryBack" app fixed>
+    <v-footer text-xs-center class="primaryBack" app fixed>
       <span>&copy; 2018 AlxcM</span>
     </v-footer>
   </v-app>
@@ -38,8 +38,10 @@ const menu = [
   {name: 'home', icon: 'home', label: 'Home'},
   {name: 'about', icon: 'help_outline', label: 'A propos'},
   {name: 'chimie', icon: 'invert_colors', label: 'Chimie'},
-  {name: 'periodic', icon: 'invert_colors', label: 'Chimie Elements'},
-  {name: 'creator', icon: 'invert_colors', label: 'Creator', params: {ficheName: 'fiche_Acide Base'}},
+  {name: 'periodic', icon: 'invert_colors', label: 'Elements du tableau periodique'},
+  {name: 'charge', icon: 'invert_colors', label: 'Importer/Exporter'},
+  {name: 'fiches', icon: 'invert_colors', label: 'Mes Cours'},
+  {name: 'creator', icon: 'invert_colors', label: 'Nouvelle Fiche', params: {editable: true}},
   {name: 'config', icon: 'settings', label: 'Configs'}
 ]
 export default {
@@ -72,7 +74,7 @@ export default {
   text-align: center;
 }
 .mainContent{
-  background-color: rgb(185, 190, 196);
+  background-color: rgb(224, 224, 224);
 }
 
 .primaryBack{
@@ -92,6 +94,14 @@ export default {
   text-decoration: underline;
   text-decoration-color:rgb(80, 160, 252);
   word-wrap: break-word;
-  text-align: center;
+  text-align: left;
+}
+.caption{
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+.v-list{
+  background-color: transparent !important;
 }
 </style>

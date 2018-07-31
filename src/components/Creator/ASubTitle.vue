@@ -1,10 +1,8 @@
 <template>
-  <v-layout>
-    <v-flex >
-      <v-text-field v-if="editable"  :full-width="!editable" hide-details single-line class="title "  v-model="contentInternal"></v-text-field>
-      <h2 v-else  class="subTitle title">{{contentInternal}}</h2>
-    </v-flex>
-  </v-layout>
+  <v-flex xs10 mb-2>
+    <v-text-field v-if="editable" placeholder="Sous Titre"  :full-width="!editable" hide-details single-line class="subheading"  v-model="contentInternal"></v-text-field>
+    <h2 v-else  class="subTitle subheading">{{contentInternal}}</h2>
+  </v-flex>
 </template>
 
 <script>

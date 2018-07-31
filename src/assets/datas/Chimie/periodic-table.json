@@ -1,6 +1,6 @@
 [
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "14731c75f89cca16d706a79a7d2dbbdf10f544f1",
         "fields": {
             "boilingpoint": 239.0,
@@ -26,7 +26,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "4c81092abeeb9d37d9955e25a116358565c9ae61",
         "fields": {
             "boilingpoint": 332.0,
@@ -52,7 +52,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "50e327139e49bbf3ffc9ef5b17eb7713062dd75b",
         "fields": {
             "boilingpoint": 2477.0,
@@ -78,7 +78,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "96195bb4dfd74ab91fc5ee8807bf7ac4b7446a1e",
         "fields": {
             "boilingpoint": 85.0,
@@ -104,7 +104,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "e3f15b7e30504d05c88fdfcb5aebc36cb97672f1",
         "fields": {
             "boilingpoint": 3200.0,
@@ -129,7 +129,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "a15c323b99c336b5eb7df3b1b7f9f6ddc8713a7a",
         "fields": {
             "boilingpoint": 2334.0,
@@ -154,7 +154,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "cab2d6d333081c7fb1199a5a729d14e9366b90ec",
         "fields": {
             "boilingpoint": 3200.0,
@@ -178,7 +178,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "31e73595b88d01a6210b458aa92b27b62dbc1fe1",
         "fields": {
             "boilingpoint": 87.0,
@@ -201,7 +201,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "d1be80946027001caa658b6b790ab49192ac97a5",
         "fields": {
             "boilingpoint": 27.0,
@@ -224,7 +224,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "f74ea0cb76ddb00a439addf40f326efb034b1c46",
         "fields": {
             "boilingpoint": 1261.0,
@@ -250,7 +250,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "125b233828d4895097f93001a69246a4b7f01c03",
         "fields": {
             "boilingpoint": 3236.0,
@@ -276,7 +276,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "3b3f4660bbc947698cf8fa8122c4ac8a3e9a70a8",
         "fields": {
             "boilingpoint": 1040.0,
@@ -302,7 +302,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "9ee1decb384ba27c31a293d44cc00918f49cb88e",
         "fields": {
             "boilingpoint": 2435.0,
@@ -327,7 +327,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "bc9197a66cad3c2743f21149805918228a4f41f3",
         "fields": {
             "boilingpoint": 165.0,
@@ -352,7 +352,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "e124bbb4370a911174bdc936943f11fb4b4da8ce",
         "fields": {
             "boilingpoint": 5017.0,
@@ -377,7 +377,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "b83aff07298ccf3cbf7783306fb49ed6d8d60b33",
         "fields": {
             "boilingpoint": 3737.0,
@@ -402,7 +402,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "38073f210164f1d403a22bb4748b7d3ab0ed61ee",
         "fields": {
             "boilingpoint": 961.0,
@@ -427,7 +427,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "f9fb70d8329a750f13a701df6a5ef61cf7d6b497",
         "fields": {
             "boilingpoint": 3633.0,
@@ -451,7 +451,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "7bdbfbb0f03f8a619be782884f350923ec8f0b0d",
         "fields": {
             "boilingpoint": 2076.0,
@@ -475,7 +475,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "00b5062a4e732a53d42ed8452ef5191d6d1c24d3",
         "fields": {
             "boilingpoint": 1746.0,
@@ -501,7 +501,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "b440bd569202b399f5a8c5c65470e3ae3ffde867",
         "fields": {
             "boilingpoint": 4701.0,
@@ -526,7 +526,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "321961b7affc3d7bb232d1d1a94f281bbbf22502",
         "fields": {
             "boilingpoint": 5828.0,
@@ -551,7 +551,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "e4fead55445321daa543bffa75ca6ccec49a686b",
         "fields": {
             "boilingpoint": 5731.0,
@@ -576,7 +576,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "0cac0ad0a2f4fb3b6757f2c66737bef0f7c00074",
         "fields": {
             "boilingpoint": 3523.0,
@@ -600,7 +600,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "1131c70266a624c68f6a1ac085f948e965902f4d",
         "fields": {
             "boilingpoint": 1235.0,
@@ -624,7 +624,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "7743c6e9f5091072ec3999e3465ca97ab0e49c3e",
         "fields": {
             "boilingpoint": 3503.0,
@@ -648,7 +648,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "32a6ad5f4d7c3b90157cd20735caed12f2ee7a8d",
         "fields": {
             "boilingpoint": 2840.0,
@@ -672,7 +672,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "e2c465da5483f3b225c6477a3f0891a389dd36b2",
         "fields": {
             "boilingpoint": 2973.0,
@@ -696,7 +696,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "4cc01925c21e582663d5ef2b01155f3aeaaff7dc",
         "fields": {
             "boilingpoint": 211.0,
@@ -718,7 +718,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "ce2c788f8091f4028f260cbd91d10e03f9556ede",
         "fields": {
             "boilingpoint": 4273.0,
@@ -741,7 +741,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "6ef85b48e81174bd80a6a15eecf3beff7b613239",
         "fields": {
             "boilingpoint": 2010.0,
@@ -764,7 +764,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "cb9f677110ffd9a00b7d46d2a8f71fde4bd66c06",
         "fields": {
             "boilingpoint": 2284.0,
@@ -786,7 +786,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "5a3e805df42669c85d94528221c00d3b4b95bb19",
         "fields": {
             "electronegativity": 1.3,
@@ -805,7 +805,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "35313003b82a9e09923b66fc9f0ee2614315124c",
         "fields": {
             "electronegativity": 1.3,
@@ -823,7 +823,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "d4ff075395487098faa5650268dd9a07c590d2ce",
         "fields": {
             "boilingpoint": 554.0,
@@ -849,7 +849,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "96160b87db74344fcd6c2d784eace0b2786ea565",
         "fields": {
             "boilingpoint": 90.0,
@@ -875,7 +875,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "fe04288b0b731b8e547df6f25d420d91169b1a93",
         "fields": {
             "boilingpoint": 1156.0,
@@ -901,7 +901,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "1c194d39da095580ed1a6c3ae4b5f50af2faa1f6",
         "fields": {
             "boilingpoint": 718.0,
@@ -926,7 +926,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "f5c3d982ab7df13ef466633e68caa2ac6d887da7",
         "fields": {
             "boilingpoint": 3560.0,
@@ -951,7 +951,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "efd74da6be20ddf3a89040fecadb139496ae3470",
         "fields": {
             "boilingpoint": 3680.0,
@@ -976,7 +976,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "ffbabdb4a0afdbbb4736ae5434789a67b563eff1",
         "fields": {
             "boilingpoint": 2743.0,
@@ -1001,7 +1001,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "7745d4105fef224720d83485aff3673d315a59c8",
         "fields": {
             "boilingpoint": 2792.0,
@@ -1025,7 +1025,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "c12d3ac4f6a82226e0cdd085df433117603c6a52",
         "fields": {
             "boilingpoint": 4.0,
@@ -1047,7 +1047,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "805c978db2ddcce67d9e3d2ce3bb5c061ce9cbcf",
         "fields": {
             "boilingpoint": 3186.0,
@@ -1073,7 +1073,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "d2ec5b2932837e1e47bd7538ab6d2d3e4b739a35",
         "fields": {
             "boilingpoint": 958.0,
@@ -1099,7 +1099,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "8bb80c54fbd17eb5158182dcb485ddf6ba6d1e72",
         "fields": {
             "boilingpoint": 1180.0,
@@ -1125,7 +1125,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "45ea5be587edc69d8e7940547668585658631339",
         "fields": {
             "boilingpoint": 887.0,
@@ -1150,7 +1150,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "242d94f7eb6c4dbba7caa7b33b9eaaa785d3bb17",
         "fields": {
             "boilingpoint": 4538.0,
@@ -1175,7 +1175,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "ff7b5435786b08fd13621512d5f515cef22e47e7",
         "fields": {
             "boilingpoint": 2875.0,
@@ -1200,7 +1200,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "72a102ffadb8af94c7dcd29e9a337b8f5383d11a",
         "fields": {
             "boilingpoint": 3618.0,
@@ -1225,7 +1225,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "7a9ec69bf584085fb0fe8c829e57138811be5ce5",
         "fields": {
             "boilingpoint": 1655.0,
@@ -1250,7 +1250,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "e3402f522b8e27a5ca4f89353d0da08b70da2ce1",
         "fields": {
             "boilingpoint": 2944.0,
@@ -1274,7 +1274,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "8f23e3a720cdaff2d7c4e4f55e36cad061808b41",
         "fields": {
             "boilingpoint": 3273.0,
@@ -1298,7 +1298,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "867c16e21ce716eeb39fbed930116a5214148fa3",
         "fields": {
             "boilingpoint": 3129.0,
@@ -1323,7 +1323,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "f409ce4f97bb34c2ac126ee1abb59707d376f74b",
         "fields": {
             "boilingpoint": 4098.0,
@@ -1348,7 +1348,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "0607590b884dc09a1c46e18d9023e5f3c0993308",
         "fields": {
             "boilingpoint": 630.0,
@@ -1373,7 +1373,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "0b34eafa6a40b21239d829f2337839d922432c96",
         "fields": {
             "boilingpoint": 5285.0,
@@ -1398,7 +1398,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "1525256b46ba56f51bc19c27761e75d361a45206",
         "fields": {
             "boilingpoint": 2022.0,
@@ -1423,7 +1423,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "f5d12668eb31577dc86f2ced6c69e32933d17f54",
         "fields": {
             "boilingpoint": 4200.0,
@@ -1447,7 +1447,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "7c3e189e1ec3b09c8c07766f725c4be7dbcc777a",
         "fields": {
             "boilingpoint": 2223.0,
@@ -1471,7 +1471,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "9927742a5eb121c170c68367629c04e33d4d8f5c",
         "fields": {
             "boilingpoint": 5093.0,
@@ -1494,7 +1494,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "fdd6df84ac909f1f95f833c78d51f33a36e1f288",
         "fields": {
             "boilingpoint": 3473.0,
@@ -1517,7 +1517,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "217067d12c81dc3cd81f59080303839a821eb382",
         "fields": {
             "electronegativity": 2.2,
@@ -1539,7 +1539,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "5a41ca53ae44e7b18274cc783e327718e5eb0e06",
         "fields": {
             "electronegativity": 1.3,
@@ -1561,7 +1561,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "800dd5a286e7d2e6d7c15e9e90f5dbade876432f",
         "fields": {
             "electronegativity": 1.3,
@@ -1583,7 +1583,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "25b50e084da34ed84bf194d5dd56fe1cd2a0ff09",
         "fields": {
             "electronegativity": 1.3,
@@ -1601,7 +1601,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "6903e5395b4aa6157b875dd0ce433c9aa05e8972",
         "fields": {
             "name": "Rutherfordium",
@@ -1616,7 +1616,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "32e7f28d4b1658efbe62142116573af421a34478",
         "fields": {
             "name": "Flerovium",
@@ -1630,7 +1630,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "163652d6e982a7ce32bb57dc2bbab3e89b87359a",
         "fields": {
             "name": "Moscovium",
@@ -1644,7 +1644,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "dd82dae0a1c64936cd4b0860b7cd3feb3e5d162c",
         "fields": {
             "name": "Copernicium",
@@ -1658,7 +1658,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "34c6abc93fa42fecea0ea06de42e698b198cf7b5",
         "fields": {
             "name": "Seaborgium",
@@ -1672,7 +1672,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "fa4e59c4f218384810922e1bf4c71b355f095a2e",
         "fields": {
             "name": "Meitnerium",
@@ -1686,7 +1686,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "96014447fb6f2c2ee7236a3e885813ecf2063d55",
         "fields": {
             "name": "Hassium",
@@ -1700,7 +1700,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "7447a24166c2f4c8f296f693b4a20569909aaa0b",
         "fields": {
             "name": "Livermorium",
@@ -1714,7 +1714,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "8c6252775f213f74aa66f2186caede583bb38700",
         "fields": {
             "name": "Oganesson",
@@ -1728,7 +1728,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "33e10a49dc2418bcda166c5b59d71a1016ca1b53",
         "fields": {
             "boilingpoint": 77.0,
@@ -1754,7 +1754,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "7b91b54aa3ae0550a56f74433db8610a87836c4e",
         "fields": {
             "boilingpoint": 3173.0,
@@ -1780,7 +1780,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "29a82ae72fdc9f1cf1db811e869ea8020ec0a59c",
         "fields": {
             "boilingpoint": 1363.0,
@@ -1806,7 +1806,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "2a21dc525eade9e70979397a81a365048e69487f",
         "fields": {
             "boilingpoint": 1032.0,
@@ -1832,7 +1832,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "f447f348a1de0249369028cb9f6b9167575d8227",
         "fields": {
             "boilingpoint": 1615.0,
@@ -1858,7 +1858,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "ef7a23c4e8b6572026eb49b97a366a8365d3884a",
         "fields": {
             "boilingpoint": 4300.0,
@@ -1883,7 +1883,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "eeba887ceb4406dcb6e4d0f3216fff08ead1bc5b",
         "fields": {
             "boilingpoint": 4273.0,
@@ -1908,7 +1908,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "f2b2d78932e7684e98e2305a4923455184dc6dfa",
         "fields": {
             "boilingpoint": 20.0,
@@ -1933,7 +1933,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "3c6e0f246a2636ba605c50f9d1860db761b1900b",
         "fields": {
             "boilingpoint": 1757.0,
@@ -1957,7 +1957,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "1690c1d106985eba6b25aea4f95a81a55448b827",
         "fields": {
             "boilingpoint": 2345.0,
@@ -1983,7 +1983,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "46440d751019e031176f6319f2e0a635452c9ace",
         "fields": {
             "boilingpoint": 4423.0,
@@ -2008,7 +2008,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "1e4498dfe0c956650ca6a4975a61af84c27bc44f",
         "fields": {
             "boilingpoint": 3968.0,
@@ -2033,7 +2033,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "f624bae81549055e792015f8c5c799f6ade32cf1",
         "fields": {
             "boilingpoint": 4912.0,
@@ -2058,7 +2058,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "547c5eeace59ab6da042e9cfaa67be811c3ea639",
         "fields": {
             "boilingpoint": 3103.0,
@@ -2083,7 +2083,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "3cd335919ff09db87a13c18c000c3593cbee6737",
         "fields": {
             "boilingpoint": 3093.0,
@@ -2108,7 +2108,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "c7eb11bef8ef2915639b55e04737ad5408503e6a",
         "fields": {
             "boilingpoint": 4682.0,
@@ -2133,7 +2133,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "1cb03fb13ee6e924f9ee5491b814e0e4fea20459",
         "fields": {
             "boilingpoint": 3134.0,
@@ -2157,7 +2157,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "621e2b2688f3d10cd20ea731ab8d56a90f3e5157",
         "fields": {
             "boilingpoint": 1860.0,
@@ -2181,7 +2181,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "4c6f293dcaab86c791de55e16885bfa513ea3790",
         "fields": {
             "boilingpoint": 120.0,
@@ -2205,7 +2205,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "ac276c9169a4751f4b9096de648271d513b5be7c",
         "fields": {
             "boilingpoint": 457.0,
@@ -2231,7 +2231,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "a462c1cb3a6f7f9a14158f4f9b8b9836daacef76",
         "fields": {
             "boilingpoint": 4876.0,
@@ -2256,7 +2256,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "904a5e370987c7e27be295cda4bf9a8fdc54bb67",
         "fields": {
             "boilingpoint": 3675.0,
@@ -2281,7 +2281,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "c24e0a00ef195b78dbb645711c0a814dce9b6579",
         "fields": {
             "boilingpoint": 2143.0,
@@ -2306,7 +2306,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "553fb26a55777eef132ebd03f3dc4be8ed4f475a",
         "fields": {
             "boilingpoint": 944.0,
@@ -2331,7 +2331,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "85063e81fdb1b80120f8ebb338d8cc4f70a18093",
         "fields": {
             "boilingpoint": 3563.0,
@@ -2355,7 +2355,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "b1ac3b19ddc45d4c80ffd5299a292e5bc7d92e1a",
         "fields": {
             "boilingpoint": 1469.0,
@@ -2379,7 +2379,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "1d0ec930790137100fa2395b7667d01113fd0bb6",
         "fields": {
             "boilingpoint": 3373.0,
@@ -2403,7 +2403,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "c0026f338da8c4b718d7db8bf136899725dbeb7d",
         "fields": {
             "boilingpoint": 1800.0,
@@ -2427,7 +2427,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "454c89694e59c58a160581cece6d8443f7bae018",
         "fields": {
             "boilingpoint": 3141.0,
@@ -2451,7 +2451,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "0d22e1d4414f89d755460d0e0d57fd9dd070ed1a",
         "fields": {
             "boilingpoint": 5869.0,
@@ -2476,7 +2476,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "b997265a6bec3693679602d0d649759e4159ba79",
         "fields": {
             "boilingpoint": 1837.0,
@@ -2500,7 +2500,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "51ab93cd76e650aec2cc10ef44a135758f70d3de",
         "fields": {
             "boilingpoint": 4273.0,
@@ -2523,7 +2523,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "76e9d6606975c32092b0e2a79c44672c08923d02",
         "fields": {
             "boilingpoint": 3503.0,
@@ -2546,7 +2546,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "13e387d427e457397e040f254e4166a2116c04d8",
         "fields": {
             "boilingpoint": 3383.0,
@@ -2569,7 +2569,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "656457303063b5e0c00af20bc5941a929975f801",
         "fields": {
             "electronegativity": 0.7,
@@ -2589,7 +2589,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "27b8690eed4e6d24ec88b6d07b8f7febf28fc7cb",
         "fields": {
             "electronegativity": 1.3,
@@ -2607,7 +2607,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "a138c6ef3616a8a4717f6e78016e1324dd85c9fc",
         "fields": {
             "electronegativity": 1.3,
@@ -2624,7 +2624,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "e56716a22afbe613d65da7f8166d8205907e5b0e",
         "fields": {
             "name": "Dubnium",
@@ -2638,7 +2638,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "f89c296550e5a3ac8fd14ddb884d22064d54c06c",
         "fields": {
             "name": "Bohrium",
@@ -2652,7 +2652,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "e81fc21699c7ffeb3d9bd66410a178b8eb0bf514",
         "fields": {
             "name": "Tennessine",
@@ -2666,7 +2666,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "92e35c4dc5c304950dccfd7d08d1d1d8b04f767a",
         "fields": {
             "name": "Nihonium",
@@ -2680,7 +2680,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "868c2ad250e5615593fbc066f39bf4f8b9eafe4d",
         "fields": {
             "name": "Darmstadtium",
@@ -2694,7 +2694,7 @@
         "record_timestamp": "2017-12-08T16:24:01+01:00"
     },
     {
-        "datasetid": "periodic-table@datastro",
+        "datasetid": "periodic-table",
         "recordid": "cd15a26451e8e5fdcaff5d5437b40608c54cacc7",
         "fields": {
             "name": "Roentgenium",

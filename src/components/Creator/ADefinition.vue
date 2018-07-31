@@ -1,5 +1,5 @@
 <template>
-  <v-layout class="definitionContainer" ma-0 column justify-space-between>
+  <v-layout xs10 mb-1 mr-3 class="definitionContainer" ma-0 column justify-space-between>
     <v-flex pa-1>
       <v-text-field :full-width="!editable" hide-details placeholder="Mot à définir" single-line class="subheading" :readonly="!editable" v-model="defNameInternal"></v-text-field>
     </v-flex>
@@ -19,7 +19,6 @@ export default {
         return this.text
       },
       set (v) {
-        console.log(v)
         this.$emit('update:text', v)
       }
     },
@@ -28,7 +27,6 @@ export default {
         return this.defName
       },
       set (v) {
-        console.log(v)
         this.$emit('update:defName', v)
       }
     }

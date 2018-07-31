@@ -1,19 +1,19 @@
 <template>
-    <v-layout column>
-      <v-flex>
-        <span>Tier par ?</span>
-        <v-select
-        :items="tri"
-        v-model="choice"
-        item-text="label"
-        return-object
-        single-line>
-        </v-select>
-      </v-flex>
-      <v-flex>
-        <v-layout column>
-          <v-flex v-if="choice.type === 'group'">
-            <span>Faites votre choix !</span>
+    <v-container pa-0 grid-list-xs>
+      <v-layout column>
+        <v-flex mt-2 tag="h3" v-html="'Tier par ?'"></v-flex>
+        <v-flex mx-4>
+          <v-select
+          :items="tri"
+          v-model="choice"
+          item-text="label"
+          return-object
+          single-line>
+          </v-select>
+        </v-flex>
+              <v-divider></v-divider>
+                  <v-flex v-if="choice.type === 'group'">
+            <span>Encore un peu de précision !</span>
               <v-select
               :items="periodiqTableSort"
               v-model="contenu"
@@ -22,50 +22,25 @@
               single-line>
               </v-select>
           </v-flex>
-          <v-flex v-else>
-            <span>Element ?</span>
-              <v-select
-              :items="periodiqTableSort"
-              v-model="contenu"
-              item-text="fields.name"
-              return-object
-              single-line>
-              </v-select>
-          </v-flex>
-          <v-flex>
-              <v-card v-for="content in aAffficher" :key="content.fields.name">
-                <v-card-title primary-title>
-                  {{content.fields.name}} {{content.fields.atomicnumber}}
-                </v-card-title>
-                <v-card-text>
-                  <v-layout column>
-                    <v-flex>
-                      <v-layout mt-1>
-                        <v-flex >
-                          Symbol: {{content.fields.symbol}}
-                        </v-flex>
-                        <v-flex v-if="content.fields.standardstate">
-                          State: {{content.fields.standardstate}}
-                        </v-flex>
-                      </v-layout>
-                    </v-flex>
-                    <v-flex>
-                      <v-layout mt-1>
-                        <v-flex >
-                          Rayon ionique: {{content.fields.ionradius}}
-                        </v-flex>
-                        <v-flex v-if="content.fields.boilingpoint">
-                          point d'ebulition: {{content.fields.boilingpoint}}°
-                        </v-flex>
-                      </v-layout>
-                    </v-flex>
-                  </v-layout>
-                </v-card-text>
-              </v-card>
+      </v-layout>
+
+      <v-layout mt-1 column>
+
+          <v-flex xs10>
+            <v-list>
+              <v-list-tile v-for="content in aAffficher" :key="content.fields.name" avatar>
+                <v-list-tile-avatar color="blue lighten-3">
+                  <span class="white--text headline">{{content.fields.symbol}}</span>
+                </v-list-tile-avatar >
+                <v-list-tile-content>
+                  <v-list-tile-title v-html="content.fields.name"></v-list-tile-title>
+                  <v-list-tile-sub-title v-html="'Numéro atomique :' + content.fields.atomicnumber"></v-list-tile-sub-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </v-list>
           </v-flex>
         </v-layout>
-        </v-flex>
-    </v-layout>
+    </v-container>
 </template>
 
 <script>
@@ -86,7 +61,7 @@ export default {
       tri: [
         {label: 'Atomic Order', property: 'atomicnumber', type: 'number'},
         {label: 'point de fusion', property: 'boilingpoint', type: 'number'},
-        {label: 'Standar State', property: 'standardstate', type: 'group'},
+        {label: 'État standard', property: 'standardstate', type: 'group'},
         {label: 'Type de liaison', property: 'bondingtype', type: 'group'},
         {label: 'Group', property: 'groupblock', type: 'group'}],
       choice: {},
@@ -107,16 +82,26 @@ export default {
       return this.periodiqTableSort[0]
     },
     aAffficher () {
+      let p = []
       if (this.contenu.fields) {
-        return [this.contenu]
+        p = [this.contenu]
+        p.sort(dynamicSort('atomicnumber'))
       } else if (this.contenu.items) {
-        return this.contenu.items
+        p = this.contenu.items
+        p.sort(dynamicSort('atomicnumber'))
+      } else {
+        p = this.contenu
       }
+      return p
     }
   },
   watch: {
     choice (newVal, oldVal) {
-      this.contenu = this.firstItem
+      if (newVal.type === 'number') {
+        this.contenu = this.periodiqTableSort
+      } else {
+        this.contenu = this.firstItem
+      }
     }
   }
 }

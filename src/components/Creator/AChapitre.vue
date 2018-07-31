@@ -1,13 +1,9 @@
 <template>
-  <v-container pa-0 >
-    <v-layout ml-0 align-center justify-space-between>
-      <v-flex >
-        <v-textarea v-if="editable" :full-width="!editable" placeholder="Zone de texte vous pouvez ecrire ce que vous voulez" hide-details flat auto-grow rows="1" class="caption" :readonly="!editable" v-model="contentInternal">
-        </v-textarea>
-        <p v-else>{{contentInternal}}</p>
-      </v-flex>
-    </v-layout>
-  </v-container>
+    <v-flex xs10>
+      <v-textarea v-if="editable" :full-width="!editable" placeholder="Chapitre ..." hide-details flat auto-grow rows="1" class="caption" :readonly="!editable" v-model="contentInternal">
+      </v-textarea>
+      <p class="caption" v-else>{{contentInternal}}</p>
+    </v-flex>
 </template>
 
 <script>
@@ -19,7 +15,6 @@ export default {
         return this.text
       },
       set (v) {
-        console.log(v)
         this.$emit('update:text', v)
       }
     }
