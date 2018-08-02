@@ -13,7 +13,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: HelloWorld // elemnt afficehr au sein du router view
+      component: MesCours // elemnt afficehr au sein du router view
     },
     {
       path: '/periodic',

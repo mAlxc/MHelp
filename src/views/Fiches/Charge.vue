@@ -1,6 +1,6 @@
 <template>
-  <v-flex>
-    <input onchange="handleFiles(this.files)" type="file"/>
+  <v-flex tag="h1">
+    Chargement
   </v-flex>
 </template>
 

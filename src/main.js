@@ -8,6 +8,7 @@ import Vuetify from 'vuetify'
 import VueLocaleForage from 'vue-localforage'
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import store from './store'
 
 Vue.config.productionTip = false
 
@@ -29,6 +30,7 @@ Vue.use(Vuetify, {
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

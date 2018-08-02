@@ -55,13 +55,25 @@ export default {
   methods: {
     goTo (item, event) {
       this.$router.push({name: item.name, params: item.params})
+    },
+    initAll () {
+      this.$store.dispatch('fiches/initModule')
+      this.$store.dispatch('glossaire/initModule')
     }
   },
   created () {
     this.$storageConfig({
-      name: 'Fiches',
-      description: 'Base de données interne a lapplication'
+      name: 'MyApp',
+      description: 'Base de données interne a lapplication',
+      version: 1.0
     })
+    global.Lf = {
+      setItem: this.$setItem,
+      getItem: this.$getItem
+    }
+    this.initAll()
+  },
+  mounted () {
   }
 }
 </script>
