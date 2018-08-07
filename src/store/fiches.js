@@ -2,39 +2,59 @@
  * @description Store Module for 'Fiches'
  *
  */
-const initialState = {
-  myFiches: [],
-  myStudies: ['']
+function initialState () {
+  return {
+    total: 1,
+    fiches: {
+      chimie: [{
+        title: 'Introduction Generale',
+        parts: [],
+        id: 0,
+        time: 'L1',
+        type: 'Chimie'
+      }]
+    },
+    definitions: [{
+      id: 'def01',
+      word: '',
+      content: ''
+    }]
+  }
 }
 
 export default {
   namespaced: true,
-  state: {
-    myFiches: [],
-    myStudies: []
-  },
+  state: initialState,
   actions: {
-    initModule ({commit}) {
-      Lf.getItem('Fiches', (err, res) => {
-        if (err) {
-          console.error(err)
-        } else {
-          if (res === null) {
-            commit('initState', initialState)
-          } else {
-            commit('initState', res)
-          }
-        }
-      })
+    initModule ({ commit }) {
+      console.log(this.state.fiches.fiches)
+      if (this.state.fiches.fiches === undefined) {
+        commit('reset')
+      }
     }
   },
   mutations: {
-    initState (state, val) {
-      state.myFiches = val.myFiches
-      state.myStudies = val.myStudies
+    reset (state) {
+      // acquire initial state
+      const s = initialState()
+      Object.keys(s).forEach(key => {
+        state[key] = s[key]
+      })
+    },
+    newMat (state, val) {
+      state.fiches = { ...state.fiches, [val]: [] }
     },
     saveFiche (state, fiche) {
-      console.info(fiche)
+      let id = state.fiches[fiche.type].findIndex((el) => {
+        return el.id === fiche.id
+      })
+      console.log(id)
+      if (id === -1) {
+        fiche.id = state.fiches[fiche.type].length
+        state.fiches[fiche.type].push(fiche)
+      } else {
+        state.fiches[fiche.type][id] = fiche
+      }
     }
   }
 }

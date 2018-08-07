@@ -41,7 +41,6 @@ const menu = [
   {name: 'periodic', icon: 'invert_colors', label: 'Elements du tableau periodique'},
   {name: 'charge', icon: 'invert_colors', label: 'Importer/Exporter'},
   {name: 'fiches', icon: 'invert_colors', label: 'Mes Cours'},
-  {name: 'creator', icon: 'invert_colors', label: 'Nouvelle Fiche', params: {editable: true}},
   {name: 'config', icon: 'settings', label: 'Configs'}
 ]
 export default {
@@ -58,19 +57,9 @@ export default {
     },
     initAll () {
       this.$store.dispatch('fiches/initModule')
-      this.$store.dispatch('glossaire/initModule')
     }
   },
   created () {
-    this.$storageConfig({
-      name: 'MyApp',
-      description: 'Base de données interne a lapplication',
-      version: 1.0
-    })
-    global.Lf = {
-      setItem: this.$setItem,
-      getItem: this.$getItem
-    }
     this.initAll()
   },
   mounted () {
@@ -84,6 +73,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  overflow: hidden;
 }
 .mainContent{
   background-color: rgb(224, 224, 224);

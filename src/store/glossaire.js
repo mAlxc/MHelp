@@ -1,5 +1,8 @@
 const initialState = {
-  definitions: []
+  definitions: [{
+    title: 'exemple',
+    content: 'this is an exemple'
+  }]
 }
 export default {
   namespaced: true,
@@ -8,6 +11,12 @@ export default {
   },
   actions: {
     initModule ({ commit }) {
+      Lf.$storageConfig({
+        name: 'MyApp',
+        description: 'Base de données interne a lapplication',
+        version: 1.0,
+        storeName: name
+      })
       Lf.getItem('glossaire', (err, res) => {
         if (err) {
           console.error(err)

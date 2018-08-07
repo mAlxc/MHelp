@@ -52,23 +52,23 @@ import ADefinition from '@/components/Creator/ADefinition'
 import draggable from 'vuedraggable'
 
 let exempleFiche = {
-  title: '',
-  matiere: 'chimie',
-  parts: [
-    {type: 'subHeading', content: 'Introduction', id: 0}
-  ]
+  title: 'Introduction Generale',
+  parts: [],
+  id: null,
+  time: null,
+  type: null
 }
+
 export default {
   data () {
     return {
-      matiere: 'chimie',
       dialOpen: false,
       items: [
         {label: 'Sous Titre', val: 'subHeading'},
         {label: 'Définition', val: 'definition'},
         {label: 'Chapitre', val: 'chapitre'}],
       datas: {},
-      editable: false,
+      editable: true,
       errors: []
     }
   },
@@ -87,9 +87,9 @@ export default {
   created () {
     this.datas = exempleFiche
     if (this.$route.params) {
-      let name = this.$route.params.ficheName
-      if (name) {
-        this.openFiche(name)
+      let fiche = this.$route.params.fiche
+      if (fiche) {
+        this.datas = fiche
       }
       console.log(this.$route.params.editable)
       this.editable = this.$route.params.editable ? this.$route.params.editable : false
@@ -117,15 +117,6 @@ export default {
       }
       this.datas.parts.push(base)
     },
-    openFiche (name) {
-      this.$getItem(name, (error, result) => {
-        if (!error) {
-          if (result) {
-            this.datas = result
-          }
-        }
-      })
-    },
     deletePart (id) {
       this.datas.parts = this.datas.parts.filter(obj => obj.id !== id)
     },
@@ -147,16 +138,14 @@ export default {
         })
         let model = {
           title: this.datas.title,
-          matiere: this.datas.matiere,
-          parts: this.datas.parts
+          parts: this.datas.parts,
+          time: this.datas.time,
+          id: this.datas.id,
+          type: this.datas.type
         }
         if (this.errors.length === 0) {
           this.editable = !this.editable
-          this.$setItem('fiche_' + this.datas.title.trim(), model, function (err, res) {
-            if (err) {
-              console.error(err)
-            }
-          })
+          this.$store.commit('fiches/saveFiche', model)
         }
       } else {
         this.editable = true
