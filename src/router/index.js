@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Periodic from '@/views/Chimie/Periodic'
-import Creator from '@/views/Creator/Creator'
+import Creator from '@/views/Inspectors/DetailsCours'
 import Charge from '@/views/Fiches/Charge.vue'
 import MesCours from '@/views/Fiches/MesCours.vue'
 

@@ -2,7 +2,7 @@
     <v-container pa-0 fluid grid-list-xs>
         <v-layout ml-2 mt-2 row wrap justify-end>
             <v-flex xs10>
-              <v-text-field v-if="editable" placeholder="Nouvelle Fiche" class="display-1" single-line hide-details color="primary" v-model="datas.title" :readonly="!editable"></v-text-field>
+              <v-text-field v-if="editable" placeholder="Nouvelle Fiche" class="Title" single-line hide-details color="primary" v-model="datas.title" :readonly="!editable"></v-text-field>
               <h1 v-else class="Title">{{datas.title}}</h1>
             </v-flex>
             <v-flex xs2>

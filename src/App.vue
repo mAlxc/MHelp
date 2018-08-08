@@ -89,6 +89,7 @@ export default {
   text-decoration-color:rgb(80, 160, 252);
   word-wrap: break-word;
   text-align: left;
+  font-size: 3.5vh;
 }
 
 .Title{
@@ -96,11 +97,25 @@ export default {
   text-decoration: underline;
   text-decoration-color:rgb(80, 160, 252);
   word-wrap: break-word;
-  text-align: left;
+  font-size: 4vh;
 }
-.caption{
-  word-wrap: break-word;
+
+.chapter{
+  font-size: 3vh;
+}
+
+.leftJustifyText{
   text-align: justify;
+  text-align-last: left;
+}
+
+.roundLeftBox{
+  border-style: groove;
+  border-color: rgba(0, 102, 255, 0.493);
+  border-width: 0ch;
+  border-radius: 15px;
+  border-left-width: thick;
+  border-bottom-width: thin;
 }
 
 .v-list{

@@ -18,7 +18,8 @@ function initialState () {
       id: 'def01',
       word: '',
       content: ''
-    }]
+    }],
+    times: ['L1']
   }
 }
 
@@ -43,6 +44,11 @@ export default {
     },
     newMat (state, val) {
       state.fiches = { ...state.fiches, [val]: [] }
+    },
+    newTime (state, val) {
+      if (state.times.indexOf(val) < 0) {
+        state.times.push(val)
+      }
     },
     saveFiche (state, fiche) {
       let id = state.fiches[fiche.type].findIndex((el) => {

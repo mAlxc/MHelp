@@ -20,7 +20,8 @@ export default new Vuex.Store({
         const obj = {
           fiches: {
             fiches: state.fiches.fiches,
-            definitions: state.fiches.definition
+            definitions: state.fiches.definition,
+            times: state.fiches.times
           }}
         return obj
       }

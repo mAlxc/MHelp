@@ -1,13 +1,15 @@
 <template>
-  <v-layout xs10 mb-1 mr-3 class="definitionContainer" ma-0 column justify-space-between>
+<v-flex xs10 mb-1 mr-3 class="roundLeftBox" pa-0 >
+  <v-layout column justify-space-between>
     <v-flex pa-1>
-      <v-text-field :full-width="!editable" hide-details placeholder="Mot à définir" single-line class="subheading" :readonly="!editable" v-model="defNameInternal"></v-text-field>
+      <v-text-field :full-width="!editable" hide-details flat placeholder="Mot à définir" single-line class="leftJustifyText subTitle" :readonly="!editable" v-model="defNameInternal"></v-text-field>
     </v-flex>
     <v-flex pa-0 mt-1 ml-4>
-      <v-textarea :full-width="!editable" placeholder="La définition" hide-details flat auto-grow rows="1" class="caption" :readonly="!editable" v-model="contentInternal">
+      <v-textarea :full-width="!editable" placeholder="La définition" hide-details flat auto-grow rows="1" class="leftJustifyText chapter" :readonly="!editable" v-model="contentInternal">
       </v-textarea>
     </v-flex>
   </v-layout>
+</v-flex>
 </template>
 
 <script>
@@ -40,12 +42,4 @@ export default {
 </script>
 
 <style scoped>
-.definitionContainer{
-  border-style: groove;
-  border-color: rgba(0, 102, 255, 0.493);
-  border-width: thin;
-  border-radius: 15px;
-  border-left-width: thick;
-  border-right-width: thick;
-}
 </style>
