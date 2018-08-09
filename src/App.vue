@@ -6,16 +6,19 @@
       temporary
       clipped
       class="primaryBack"
+      style="width:70vw"
     >
-      <v-list dense>
-        <v-list-tile v-for="elm in menu" :key="'m_'+elm.name" @click="goTo(elm)">
-          <v-list-tile-action>
-            <v-icon>{{elm.icon}}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>{{elm.label}}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+      <v-list class="chapter" dense>
+        <template v-for="elm in menu" >
+          <v-list-tile avatar :key="'m_'+elm.name"  @click="goTo(elm)">
+            <v-list-tile-action>
+              <v-icon >{{elm.icon}}</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>{{elm.label}}
+            </v-list-tile-content>
+          </v-list-tile>
+        </template>
+
       </v-list>
     </v-navigation-drawer>
     <v-toolbar class="primaryBack" app fixed clipped-left>
@@ -85,40 +88,60 @@ export default {
 
 .subTitle{
   font-style: italic !important;
-  text-decoration: underline;
-  text-decoration-color:rgb(80, 160, 252);
   word-wrap: break-word;
   text-align: left;
-  font-size: 3.5vh;
+  font-size: 5vmin;
+}
+
+.subTitle *{
+  font-size: inherit !important;
+  line-height: inherit !important;
 }
 
 .Title{
   font-style: italic !important;
-  text-decoration: underline;
-  text-decoration-color:rgb(80, 160, 252);
   word-wrap: break-word;
-  font-size: 4vh;
+  font-size: 7vmin;
+  line-height: 7.01vmin;
+  text-align: center;
+}
+
+.Title * {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+.v-navigation-drawer--close.v-navigation-drawer--temporary {
+    transform: translateX(-70vw) !important;
 }
 
 .chapter{
-  font-size: 3vh;
-}
-
-.leftJustifyText{
+  font-size: 3.5vmin;
+  line-height: 3.6vmin;
   text-align: justify;
   text-align-last: left;
+  text-justify: auto;
+}
+
+.chapter *{
+  font-size: inherit !important;
+  line-height: inherit !important;
+  text-align: inherit !important;
 }
 
 .roundLeftBox{
   border-style: groove;
-  border-color: rgba(0, 102, 255, 0.493);
+  border-color: rgba(0, 102, 255, 0.6);
   border-width: 0ch;
   border-radius: 15px;
   border-left-width: thick;
   border-bottom-width: thin;
 }
-
+.underlign{
+  border-bottom: thin rgba(0, 102, 255, 0.6) solid;
+}
 .v-list{
   background-color: transparent !important;
 }
+
 </style>

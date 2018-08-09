@@ -1,12 +1,14 @@
 <template>
-<v-flex xs10 mb-1 mr-3 class="roundLeftBox" pa-0 >
-  <v-layout column justify-space-between>
-    <v-flex pa-1>
-      <v-text-field :full-width="!editable" hide-details flat placeholder="Mot à définir" single-line class="leftJustifyText subTitle" :readonly="!editable" v-model="defNameInternal"></v-text-field>
+<v-flex  xs11 mb-1 class="defBox" >
+  <v-layout column>
+    <v-flex pa-0 class="subTitle">
+      <v-textarea v-if="editable" :full-width="!editable" placeholder="Definir quoi ?" hide-details flat auto-grow :readonly="!editable" v-model="defNameInternal" rows="1"></v-textarea>
+      <span v-else class="">{{defNameInternal}}</span>
     </v-flex>
-    <v-flex pa-0 mt-1 ml-4>
-      <v-textarea :full-width="!editable" placeholder="La définition" hide-details flat auto-grow rows="1" class="leftJustifyText chapter" :readonly="!editable" v-model="contentInternal">
+    <v-flex class="chapter" pa-0 mt-2 ml-2>
+      <v-textarea v-if="editable" placeholder="La définition" v-model="contentInternal" single-line hide-details >
       </v-textarea>
+      <p v-else>{{contentInternal}}</p>
     </v-flex>
   </v-layout>
 </v-flex>
@@ -42,4 +44,7 @@ export default {
 </script>
 
 <style scoped>
+.defBox{
+  border: medium dotted rgba(0, 102, 255, 0.493);
+}
 </style>

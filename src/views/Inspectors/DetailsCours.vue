@@ -1,9 +1,9 @@
 <template>
     <v-container pa-0 fluid grid-list-xs>
-        <v-layout ml-2 mt-2 row wrap justify-end>
+        <v-layout class="Title" ml-2 mt-2 row wrap justify-end>
             <v-flex xs10>
-              <v-text-field v-if="editable" placeholder="Nouvelle Fiche" class="Title" single-line hide-details color="primary" v-model="datas.title" :readonly="!editable"></v-text-field>
-              <h1 v-else class="Title">{{datas.title}}</h1>
+              <v-textarea  v-if="editable" placeholder="Nouvelle Fiche" single-line hide-details color="primary" v-model="datas.title" :readonly="!editable" auto-grow rows="1"></v-textarea>
+              <p v-else>{{datas.title}}</p>
             </v-flex>
             <v-flex xs2>
               <v-btn @click="saveFiche" small icon flat>
@@ -90,8 +90,10 @@ export default {
       let fiche = this.$route.params.fiche
       if (fiche) {
         this.datas = fiche
+      } else {
+        this.datas.type = 'Chimie'
+        this.datas.time = 'L1'
       }
-      console.log(this.$route.params.editable)
       this.editable = this.$route.params.editable ? this.$route.params.editable : false
     }
   },

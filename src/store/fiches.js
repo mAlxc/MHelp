@@ -6,7 +6,7 @@ function initialState () {
   return {
     total: 1,
     fiches: {
-      chimie: [{
+      Chimie: [{
         title: 'Introduction Generale',
         parts: [],
         id: 0,
@@ -51,15 +51,21 @@ export default {
       }
     },
     saveFiche (state, fiche) {
-      let id = state.fiches[fiche.type].findIndex((el) => {
-        return el.id === fiche.id
-      })
-      console.log(id)
-      if (id === -1) {
-        fiche.id = state.fiches[fiche.type].length
-        state.fiches[fiche.type].push(fiche)
-      } else {
-        state.fiches[fiche.type][id] = fiche
+      let id = null
+      console.log(fiche)
+      if (state.fiches[fiche.type]) {
+        console.log(state.fiches[fiche.type])
+        id = state.fiches[fiche.type].findIndex((el) => {
+          console.log(el)
+          return el.id === fiche.id
+        })
+        console.log(id)
+        if (id === -1) {
+          fiche.id = state.fiches[fiche.type].length
+          state.fiches[fiche.type].push(fiche)
+        } else {
+          state.fiches[fiche.type][id] = fiche
+        }
       }
     }
   }
