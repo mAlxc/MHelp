@@ -6,7 +6,7 @@
     <v-treeview v-model="tree" :open="open" :items="definitions" activatable item-key="name" open-on-click>
       <template slot="prepend" slot-scope="{ item, open, leaf }">
         <v-icon v-if="!item.icon">
-          {{ open ? 'folder-outline' : 'folder' }}
+          {{ open ? 'mdi-folder-outline' : 'folder' }}
         </v-icon>
         <v-icon v-else>
           {{item.icon}}
