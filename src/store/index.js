@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import fiches from './fiches'
+import definitions from './definitions'
 import createPersistedState from 'vuex-persistedstate'
 Vue.use(Vuex)
 
@@ -9,7 +10,8 @@ export default new Vuex.Store({
     title: 'Maro\'s Help'
   },
   modules: {
-    fiches
+    fiches,
+    definitions
   },
   plugins: [
     createPersistedState({
@@ -18,11 +20,8 @@ export default new Vuex.Store({
       paths: [],
       reducer: state => {
         const obj = {
-          fiches: {
-            fiches: state.fiches.fiches,
-            definitions: state.fiches.definition,
-            times: state.fiches.times
-          }}
+          definitions: state.definitions
+        }
         return obj
       }
     })

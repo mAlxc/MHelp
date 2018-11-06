@@ -41,6 +41,7 @@ const menu = [
   {name: 'home', icon: 'home', label: 'Home'},
   {name: 'about', icon: 'help_outline', label: 'A propos'},
   {name: 'chimie', icon: 'invert_colors', label: 'Chimie'},
+  {name: 'definitions', icon: 'invert_colors', label: 'Toutes mes definitions'},
   {name: 'periodic', icon: 'invert_colors', label: 'Elements du tableau periodique'},
   {name: 'charge', icon: 'invert_colors', label: 'Importer/Exporter'},
   {name: 'fiches', icon: 'invert_colors', label: 'Mes Cours'},

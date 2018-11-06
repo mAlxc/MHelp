@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Periodic from '@/views/Chimie/Periodic'
-import Creator from '@/views/Inspectors/DetailsCours'
+// import Creator from '@/views/Inspectors/DetailsCours'
+import DefinitionsList from '@/views/Definition/DefinitionList'
 import Charge from '@/views/Fiches/Charge.vue'
 import MesCours from '@/views/Fiches/MesCours.vue'
 
@@ -21,9 +22,9 @@ export default new Router({
       component: Periodic // elemnt afficehr au sein du router view
     },
     {
-      path: '/creator',
-      name: 'creator',
-      component: Creator // elemnt afficehr au sein du router view
+      path: '/definitions',
+      name: 'definitions',
+      component: DefinitionsList // elemnt afficehr au sein du router view
     },
     {
       path: '/charge',
