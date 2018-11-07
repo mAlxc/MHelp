@@ -9,11 +9,12 @@ import VueLocaleForage from 'vue-localforage'
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import store from './store'
+import VueMathjax from 'vue-mathjax'
 
 Vue.config.productionTip = false
 
 Vue.use(VueLocaleForage)
-
+Vue.use(VueMathjax)
 Vue.use(Vuetify, {
   theme: {
     primary: '#42A5F5',

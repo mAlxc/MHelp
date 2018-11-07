@@ -14,15 +14,24 @@
       </template>
     </v-treeview>
     <v-flex>
+      <textarea v-model="formula" cols="30" rows="10"></textarea>
+    </v-flex>
+    <v-flex>
+      <vue-mathjax :formula="('$$'+formula +'$$')"></vue-mathjax>
     </v-flex>
   </v-layout>
 </template>
 <script>
+import { VueMathjax } from 'vue-mathjax'
 export default {
+  components: {
+    'vue-mathjax': VueMathjax
+  },
   data: () => ({
     open: [],
     tree: [],
-    definitions: []
+    definitions: [],
+    formula: 'x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.'
   }),
   created () {
     this.definitions = this.$store.state.definitions.definitions

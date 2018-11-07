@@ -1,0 +1,9 @@
+{
+    "definitions":[
+        {"id": "00001",
+        "objet": "Matrice",
+        "corps": "Tableau rectangulaire de nombres, sur lesquels on définit certaines opérations.",
+        "matiere_id":"301"
+        }
+    ]
+}
