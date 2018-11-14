@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Periodic from '@/views/Chimie/Periodic'
+import Home from '@/views/Home'
 // import Creator from '@/views/Inspectors/DetailsCours'
 import DefinitionsList from '@/views/Definition/DefinitionList'
 import Charge from '@/views/Fiches/Charge.vue'
@@ -14,7 +15,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: MesCours // elemnt afficehr au sein du router view
+      component: Home // elemnt afficehr au sein du router view
     },
     {
       path: '/periodic',

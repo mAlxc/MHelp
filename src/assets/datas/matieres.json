@@ -1,7 +1,14 @@
-{
-    "matieres":[
-        {"id":"301",
-        "name":"Maths",
-        "year":"L2"}
-    ]
-}
+[
+  {
+    "id":"m1",
+    "name": "Maths",
+    "id_year": "001",
+    "icon":"mdi-calculator-variant"
+  },
+  {
+    "id":"m2",
+    "name": "Physique",     
+    "id_year": "001",
+    "icon":"mdi-food-apple"
+  }
+]

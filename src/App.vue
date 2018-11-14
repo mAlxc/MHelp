@@ -22,7 +22,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar class="primaryBack" app fixed clipped-left>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon>mdi-menu</v-icon></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
     <v-content class="mainContent">
@@ -38,14 +38,14 @@
 
 <script>
 const menu = [
-  {name: 'home', icon: 'home', label: 'Home'},
-  {name: 'about', icon: 'help_outline', label: 'A propos'},
-  {name: 'chimie', icon: 'invert_colors', label: 'Chimie'},
-  {name: 'definitions', icon: 'invert_colors', label: 'Toutes mes definitions'},
-  {name: 'periodic', icon: 'invert_colors', label: 'Elements du tableau periodique'},
-  {name: 'charge', icon: 'invert_colors', label: 'Importer/Exporter'},
-  {name: 'fiches', icon: 'invert_colors', label: 'Mes Cours'},
-  {name: 'config', icon: 'settings', label: 'Configs'}
+  {name: 'home', icon: 'mdi-home', label: 'Home'},
+  {name: 'about', icon: 'mdi-help', label: 'A propos'},
+  {name: 'chimie', icon: 'mdi-biohazard', label: 'Chimie'},
+  {name: 'definitions', icon: 'mdi-playlist-check', label: 'Toutes mes definitions'},
+  {name: 'periodic', icon: 'mdi-invert_colors', label: 'Elements du tableau periodique'},
+  {name: 'charge', icon: 'mdi-playlist-check', label: 'Importer/Exporter'},
+  {name: 'fiches', icon: 'mdi-playlist', label: 'Mes Cours'},
+  {name: 'config', icon: 'mdi-settings', label: 'Configs'}
 ]
 export default {
   name: 'App',

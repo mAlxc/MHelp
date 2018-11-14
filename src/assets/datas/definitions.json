@@ -1,9 +1,45 @@
-{
-    "definitions":[
-        {"id": "00001",
-        "objet": "Matrice",
-        "corps": "Tableau rectangulaire de nombres, sur lesquels on définit certaines opérations.",
-        "matiere_id":"301"
-        }
-    ]
-}
+[
+  {
+    "id": "d01",
+    "objet": "Matrice",
+    "icon": "mdi-matrix",
+    "name": "Matrice",
+    "corps": "Tableau rectangulaire de nombres, sur lesquels on définit certaines opérations.",
+    "matiere_id": "m1",
+    "chapter_id": "001"
+  },
+  {
+    "id": "d02",
+    "objet": "Test",
+    "name": "Test",
+    "corps": "Test de corps",
+    "matiere_id": "m2",
+    "chapter_id": "001",
+    "icon":"mdi-alien"
+  },
+  {
+    "id": "d03",
+    "objet": "Test",
+    "name": "Test",
+    "corps": "Test de corps",
+    "matiere_id": "m2",
+    "chapter_id": "001"
+  },
+  {
+    "id": "d04",
+    "objet": "Test",
+    "name": "Test",
+    "corps": "Test de corps",
+    "matiere_id": "m2",
+    "chapter_id": "001"
+  },
+  {
+    "id": "d05",
+    "objet": "Test",
+    "name": "Test",
+    "corps": "Test de corps",
+    "matiere_id": "m2",
+    "chapter_id": "001",
+    "icon":"mdi-access-point"
+  }
+]

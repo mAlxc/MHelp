@@ -1,9 +1,10 @@
 {
-    "equations":[
-        {"id":"201",
-        "matiere_id":"301",
-        "name":"test",
-        "corps":"toto"
+  "equations": [
+    {
+      "id": "201",
+      "matiere_id": "301",
+      "name": "test",
+      "corps": "toto"
     }
-    ]
+  ]
 }

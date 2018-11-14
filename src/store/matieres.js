@@ -1,14 +1,10 @@
-/**
- * @description Store Module for 'Fiches'
- *
- */
-const PREFIXID = 'df_'
+const PREFIXID = 'm_'
 
 export default {
   namespaced: true,
   state: {
-    counter: 0,
-    definitions: []
+    matieres: [],
+    counter: 0
   },
   actions: {
     aAddMatiere ({ state, commit }, mat) {
@@ -24,19 +20,14 @@ export default {
   },
   mutations: {
     mAddMatiere (state, mat) {
-      state.definitions.push({
+      state.matieres.push({
         id: PREFIXID + state.counter++,
         name: mat,
-        icon: 'mdi-information'
+        icon: 'mdi-calculator-variant'
       })
     }
   },
   getters: {
-    gDefForMat: (state) => (id) => {
-      return state.definitions.filter(todo => todo.matiere_id === id)
-    },
-    gNumDefForMat: (state) => (id) => {
-      return state.definitions.filter(todo => todo.matiere_id === id).length
-    }
+
   }
 }
