@@ -16,7 +16,7 @@ export default {
         if (state.years.find(m => m.name.toUpperCase() === year.toUpperCase())) {
           reject(new Error({isIn: true, message: 'Deja present'}))
         } else {
-          commit('mAddMatiere', year)
+          commit('mAddYear', year)
           resolve({isIn: false, message: 'Ajouter'})
         }
       })

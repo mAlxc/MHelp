@@ -3,12 +3,11 @@
     <v-card-title>
     </v-card-title>
     <v-card-text>
-      <v-text-field v-model="matName" label="Matiere" outline></v-text-field>
-      <p class="caption text--red">{{success}}</p>
+      <v-text-field v-model="yearName" label="Année ex: L1" outline></v-text-field>
     </v-card-text>
     <v-card-actions>
-      <v-btn @click="SaveMat">
-        <v-icon> mdi-save</v-icon>
+      <v-btn color="success" :disabled="yearName===''" round block  @click="Save">
+        <v-icon>mdi-save</v-icon>
         Save
       </v-btn>
     </v-card-actions>
@@ -18,19 +17,14 @@
 <script>
 export default {
   data: () => ({
-    matName: '',
+    yearName: '',
     success: null
   }),
-  computed: {
-    listeMatieres () {
-      console.log(this.$store.state)
-      return []
-    }
-  },
+  computed: {},
   methods: {
-    SaveMat () {
+    Save () {
       this.$store
-        .dispatch('matieres/aAddMatiere', this.matName)
+        .dispatch('years/aAddYear', this.yearName)
         .then(e => {
           this.success = true
         })

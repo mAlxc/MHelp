@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import NewMat from '@/components/Matiere/NewMat'
-import MatList from '@/components/Matiere/MatSelect'
-import MatListe from '@/components/Matiere/MatList'
+import NewMat from '@/components/Matiere/New'
+import MatList from '@/components/Matiere/Select'
+import MatListe from '@/components/Matiere/List'
 
 export default {
   components: { NewMat, MatList, MatListe },

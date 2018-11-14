@@ -1,5 +1,5 @@
 <template>
-  <v-select v-model="selection" :items="years" item-text="name" label="Matiere" persistent-hint return-object single-line></v-select>
+  <v-select v-model="selection" :items="years" item-text="name" label="Période" persistent-hint return-object single-line></v-select>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
   computed: {
     ...mapState({
     // arrow functions can make the code very succinct!
-      matieres (state) {
+      years (state) {
         return state.years.years
       }
     }),

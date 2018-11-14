@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Periodic from '@/views/Chimie/Periodic'
+import GestYears from '@/views/Year/Gest'
+import GestMats from '@/views/Matiere/Gest'
 import Home from '@/views/Home'
 // import Creator from '@/views/Inspectors/DetailsCours'
 import DefinitionsList from '@/views/Definition/DefinitionList'
@@ -16,6 +18,16 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home // elemnt afficehr au sein du router view
+    },
+    {
+      path: '/years',
+      name: 'yearsGest',
+      component: GestYears // elemnt afficehr au sein du router view
+    },
+    {
+      path: '/matieres',
+      name: 'matieresGest',
+      component: GestMats // elemnt afficehr au sein du router view
     },
     {
       path: '/periodic',

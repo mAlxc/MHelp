@@ -9,7 +9,7 @@ export default {
   actions: {
     aAddMatiere ({ state, commit }, mat) {
       return new Promise((resolve, reject) => {
-        if (state.matieres.find(m => m.name.toUpperCase() === mat.toUpperCase())) {
+        if (state.matieres.find(m => m.name.toUpperCase() === mat.name.toUpperCase())) {
           reject(new Error({isIn: true, message: 'Deja present'}))
         } else {
           commit('mAddMatiere', mat)
@@ -22,7 +22,8 @@ export default {
     mAddMatiere (state, mat) {
       state.matieres.push({
         id: PREFIXID + state.counter++,
-        name: mat,
+        year_id: mat.year,
+        name: mat.name,
         icon: 'mdi-calculator-variant'
       })
     }

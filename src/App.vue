@@ -39,13 +39,15 @@
 <script>
 const menu = [
   {name: 'home', icon: 'mdi-home', label: 'Home'},
-  {name: 'about', icon: 'mdi-help', label: 'A propos'},
+  {name: 'yearsGest', icon: 'mdi-calendar-edit', label: 'Ma chronologie'},
+  {name: 'matieresGest', icon: 'mdi-animation', label: 'Matieres'},
   {name: 'chimie', icon: 'mdi-biohazard', label: 'Chimie'},
   {name: 'definitions', icon: 'mdi-playlist-check', label: 'Toutes mes definitions'},
   {name: 'periodic', icon: 'mdi-invert_colors', label: 'Elements du tableau periodique'},
   {name: 'charge', icon: 'mdi-playlist-check', label: 'Importer/Exporter'},
   {name: 'fiches', icon: 'mdi-playlist', label: 'Mes Cours'},
-  {name: 'config', icon: 'mdi-settings', label: 'Configs'}
+  {name: 'config', icon: 'mdi-settings', label: 'Configs'},
+  {name: 'about', icon: 'mdi-help', label: 'A propos'}
 ]
 export default {
   name: 'App',
