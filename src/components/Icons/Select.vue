@@ -15,6 +15,7 @@
 
 <script>
 import matIco from './matieres.json'
+import allIco from '@/assets/datas/icons.json'
 export default {
   props: ['icotype'],
   data () {
@@ -29,7 +30,7 @@ export default {
         this.icos = matIco
         break
       default:
-        this.icos = []
+        this.icos = allIco
         break
     }
   }

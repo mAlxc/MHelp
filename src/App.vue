@@ -26,7 +26,7 @@
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
     <v-content class="mainContent">
-      <v-container  pa-0 fluid>
+      <v-container fill-height  pa-0 fluid>
         <router-view></router-view>
       </v-container>
     </v-content>
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 const menu = [
   {name: 'home', icon: 'mdi-home', label: 'Home'},
   {name: 'yearsGest', icon: 'mdi-calendar-edit', label: 'Ma chronologie'},
@@ -57,6 +58,12 @@ export default {
       menu: menu
     }
   },
+  computed: {
+    user: () => {
+      console.log(firebase.auth().currentUser.uid)
+      return firebase.auth().currentUser
+    }
+  },
   methods: {
     goTo (item, event) {
       this.$router.push({name: item.name, params: item.params})
@@ -67,6 +74,8 @@ export default {
   },
   created () {
     this.initAll()
+    this.$store.dispatch('user/setUser')
+    this.$store.dispatch('userInfos')
   },
   mounted () {
   }
