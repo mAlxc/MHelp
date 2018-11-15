@@ -19,8 +19,7 @@ export default new Vuex.Store({
     userInfos ({state}) {
       // let userId = firebase.auth().currentUser.uid
       let email = state.user.user.email
-      // eslint-disable-next-line
-      db.collection("users").doc(email).set({
+      db.collection('users').doc(email).set({
         username: name,
         laemailst: email,
         profile_picture: '1815'
