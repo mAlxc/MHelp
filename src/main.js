@@ -13,17 +13,10 @@ import VueLocaleForage from 'vue-localforage'
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import store from './store'
 import VueMathjax from 'vue-mathjax'
-
+import {config} from './configFirebase'
 // gestion de firebase
 // Initialize Firebase
-var config = {
-  apiKey: 'AIzaSyCcEkWMC66r5eLmxOy8tvfHCNeNew3tHjM',
-  authDomain: 'mhelp-4d674.firebaseapp.com',
-  databaseURL: 'https://mhelp-4d674.firebaseio.com',
-  projectId: 'mhelp-4d674',
-  storageBucket: 'mhelp-4d674.appspot.com',
-  messagingSenderId: '665355137808'
-}
+
 Firebase.initializeApp(config)
 
 // Check before each page load whether the page requires authentication/

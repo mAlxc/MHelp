@@ -73,9 +73,7 @@ export default {
     }
   },
   created () {
-    this.initAll()
     this.$store.dispatch('user/setUser')
-    this.$store.dispatch('userInfos')
   },
   mounted () {
   }

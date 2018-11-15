@@ -16,3 +16,4 @@ yarn-error.log*
 platforms*
 plugins*
 www*
+src/configFirebase.js
