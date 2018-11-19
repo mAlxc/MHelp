@@ -55,15 +55,13 @@ Vue.use(Vuetify, {
   }
 })
 
-Firebase.auth().onAuthStateChanged(function (user) {
-  /* eslint-disable no-new */
-  new Vue({
-    el: '#app',
-    router,
-    store,
-    components: { App },
-    template: '<App/>'
-  })
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  store,
+  components: { App },
+  template: '<App/>'
 })
 // Initialize Cloud Firestore through Firebase
 global.db = Firebase.firestore()

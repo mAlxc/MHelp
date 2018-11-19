@@ -1,6 +1,7 @@
 <template>
   <v-app id="app">
-    <v-navigation-drawer
+    <template v-if="user">
+<v-navigation-drawer
       v-model="drawer"
       app
       temporary
@@ -24,6 +25,10 @@
     <v-toolbar class="primaryBack" app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon>mdi-menu</v-icon></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon fab @click="signOut">
+        <v-icon>mdi-close-circle</v-icon>
+      </v-btn>
     </v-toolbar>
     <v-content class="mainContent">
       <v-container fill-height  pa-0 fluid>
@@ -33,11 +38,17 @@
     <v-footer text-xs-center class="primaryBack" app fixed>
       <span>&copy; 2018 AlxcM</span>
     </v-footer>
+    </template>
+    <template v-else>
+      <v-container fill-height>
+        <router-view></router-view>
+      </v-container>
+    </template>
   </v-app>
 </template>
 
 <script>
-import firebase from 'firebase'
+import fireabse from 'firebase'
 const menu = [
   {name: 'home', icon: 'mdi-home', label: 'Home'},
   {name: 'yearsGest', icon: 'mdi-calendar-edit', label: 'Ma chronologie'},
@@ -59,21 +70,31 @@ export default {
     }
   },
   computed: {
-    user: () => {
-      console.log(firebase.auth().currentUser.uid)
-      return firebase.auth().currentUser
+    user () {
+      return this.$store.state.user.user
     }
   },
   methods: {
     goTo (item, event) {
       this.$router.push({name: item.name, params: item.params})
     },
+    signOut: function () {
+      this.$store.dispatch('user/logOff')
+    },
     initAll () {
       this.$store.dispatch('fiches/initModule')
     }
   },
   created () {
-    this.$store.dispatch('user/setUser')
+    fireabse.auth().onAuthStateChanged(a => {
+      if (a === null) {
+        this.$router.push({name: 'signIn'})
+      } else {
+        this.$store.dispatch('user/setUser')
+        this.$store.dispatch('matieres/getAllMats')
+        this.$router.push({name: 'home'})
+      }
+    })
   },
   mounted () {
   }
