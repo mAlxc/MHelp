@@ -49,15 +49,9 @@ export default {
     }),
     items () {
       let l = []
-      console.log(this.years)
       if (this.years) {
-        this.years.forEach(mat => {
-          console.log(mat)
-          let i = { name: mat.name,
-            id: mat.id,
-            countMat: 0
-          }
-          l.push(i)
+        this.years.forEach(element => {
+          l.push(element)
         })
       }
       return l
@@ -66,7 +60,6 @@ export default {
   methods: {
     toggle (index) {
       const i = this.selected.indexOf(index)
-
       if (i > -1) {
         this.selected.splice(i, 1)
       } else {
@@ -75,7 +68,6 @@ export default {
     }
   },
   created () {
-    console.log(this.years)
     console.log(this.items)
   }
 }

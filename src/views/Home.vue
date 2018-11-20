@@ -3,18 +3,6 @@
     <v-flex tag="h2">
       Home
     </v-flex>
-    <v-flex px-2 my-3>
-      <mat-list v-model="selection"></mat-list>
-    </v-flex>
-    <v-flex px-2 my-3>
-      <new-mat></new-mat>
-    </v-flex>
-    <v-flex px-2 my-3>
-      <mat-liste></mat-liste>
-    </v-flex>
-    <v-flex>
-      {{selection}}
-    </v-flex>
   </v-layout>
 </template>
 
@@ -28,6 +16,15 @@ export default {
   data () {
     return {
       selection: { name: '', icon: '' }
+    }
+  },
+  created () {
+    this.getYears()
+  },
+  methods: {
+    async getYears () {
+      let a = await this.$store.dispatch('years/aGetYears')
+      console.log(a)
     }
   }
 }

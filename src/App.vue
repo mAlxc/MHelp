@@ -91,7 +91,7 @@ export default {
         this.$router.push({name: 'signIn'})
       } else {
         this.$store.dispatch('user/setUser')
-        this.$store.dispatch('matieres/getAllMats')
+        this.$store.dispatch('matieres/aGetMatieres')
         this.$router.push({name: 'home'})
       }
     })

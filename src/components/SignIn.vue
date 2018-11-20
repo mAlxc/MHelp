@@ -1,5 +1,5 @@
 <template>
-  <v-layout fill-height column>
+  <v-layout fill-height fluid column>
     <v-flex>
       <h1>M'Help</h1>
       <p>connexion a votre espace de revision personnel</p>

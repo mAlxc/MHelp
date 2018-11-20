@@ -17,11 +17,20 @@
 import matIco from './matieres.json'
 import allIco from '@/assets/datas/icons.json'
 export default {
-  props: ['icotype'],
+  props: ['icotype', 'value'],
   data () {
     return {
-      selection: null,
       icos: []
+    }
+  },
+  computed: {
+    selection: {
+      get () {
+        return this.value
+      },
+      set (val) {
+        this.$emit('input', val)
+      }
     }
   },
   created () {
