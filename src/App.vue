@@ -91,6 +91,9 @@ export default {
         this.$router.push({name: 'signIn'})
       } else {
         this.$store.dispatch('user/setUser')
+        this.$store.dispatch('initdb', db)
+        this.$store.dispatch('cursus/get')
+
         this.$store.dispatch('matieres/aGetMatieres')
         this.$router.push({name: 'home'})
       }

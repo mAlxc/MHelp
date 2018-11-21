@@ -3,6 +3,9 @@
     <v-flex tag="h2">
       Home
     </v-flex>
+    <v-flex>
+      <new-cursus></new-cursus>
+    </v-flex>
   </v-layout>
 </template>
 
@@ -10,9 +13,10 @@
 import NewMat from '@/components/Matiere/New'
 import MatList from '@/components/Matiere/Select'
 import MatListe from '@/components/Matiere/List'
+import newCursus from '@/components/Cursus/New'
 
 export default {
-  components: { NewMat, MatList, MatListe },
+  components: { NewMat, MatList, MatListe, newCursus },
   data () {
     return {
       selection: { name: '', icon: '' }

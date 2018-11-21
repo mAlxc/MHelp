@@ -8,7 +8,7 @@
 
               <v-list-tile-content>
                 <v-list-tile-title>{{ item.name }}</v-list-tile-title>
-                <v-list-tile-sub-title class="text--primary">{{ item.headline }}</v-list-tile-sub-title>
+                <v-list-tile-sub-title>{{item}}</v-list-tile-sub-title>
                 <v-list-tile-sub-title v-if="item.countFi>0">Definitions associées : {{ item.countDef }}</v-list-tile-sub-title>
                 <v-list-tile-sub-title v-if="item.countDef>0">Equations associées : {{ item.countEq }}</v-list-tile-sub-title>
                 <v-list-tile-sub-title v-if="item.countEq>0">Definitions associées : {{ item.count }}</v-list-tile-sub-title>

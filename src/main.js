@@ -10,14 +10,13 @@ import Firebase from 'firebase'
 import router from './router'
 import Vuetify from 'vuetify'
 import VueLocaleForage from 'vue-localforage'
-import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+import 'vuetify/dist/vuetify.min.css'
 import store from './store'
 import VueMathjax from 'vue-mathjax'
-import {config} from './configFirebase'
+import {config} from './configFirebase' // Ensure you are using css-loader
+Firebase.initializeApp(config)
 // gestion de firebase
 // Initialize Firebase
-
-Firebase.initializeApp(config)
 
 // Check before each page load whether the page requires authentication/
 // if it does check whether the user is signed into the web app or

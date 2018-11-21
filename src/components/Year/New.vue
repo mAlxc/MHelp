@@ -4,7 +4,7 @@
     </v-card-title>
     <v-card-text>
       <v-text-field v-model="yearName" label="Année ex: L1" outline></v-text-field>
-      <v-text-field v-model="cursus" label="Cursus ex: Chimie" outline></v-text-field>
+      <select-cursus v-model="cursus" ></select-cursus>
     </v-card-text>
     <v-card-actions>
       <v-btn color="success" :disabled="yearName===''" round block @click="Save">
@@ -16,7 +16,10 @@
 </template>
 
 <script>
+import SelectCursus from '@/components/Cursus/Select'
+
 export default {
+  components: { SelectCursus },
   data: () => ({
     yearName: '',
     cursus: '',
@@ -27,7 +30,7 @@ export default {
     Save () {
       if (this.cursus !== '' && this.yearName !== '') {
         this.$store
-          .dispatch('years/aAddYear', {
+          .dispatch('yearsBis/set', {
             name: this.yearName,
             cursus: this.cursus
           })

@@ -4,38 +4,29 @@ const state = {
   allCursusIds: []
 }
 const mutations = {
-  SET_YEARS (state, { years }) {
-    const data = years.data()
+  SET_CURSUS (state, { cursus }) {
+    const data = cursus.data()
     state.all = {
       ...state.all,
-      [years.id]: { name: data.name, created: data.created }
+      [cursus.id]: { name: data.name, created: data.created }
     }
-    state.allNames.push(years.name)
+    state.allNames.push(cursus.name)
   }
 }
 const actions = {
   async get ({ commit, rootState }) {
-    let convoRef = rootState.db.collection('years')
+    let convoRef = rootState.db.collection('cursus')
     let convos = await convoRef.get()
-    convos.forEach(years => commit('SET_YEARS', { years }))
+    convos.forEach(cursus => commit('SET_CURSUS', { cursus }))
   },
   async set ({commit, rootState}, val) {
-    const convoRef = rootState.db.collection('years')
-    let id = null
+    const convoRef = rootState.db.collection('cursus')
     const res = await convoRef.where('name', '==', val).get()
     if (res.size === 0) {
       await convoRef.doc().set({name: val, created: Date.now()}).then((e) => { console.log('good') }).catch((e) => { console.log('bad') })
       return true
     } else {
-      let id = null
-      res.forEach((y) => {
-        console.log(y.data())
-        if (y.data().cursus === val.cursus) {
-          return false
-        } else {
-          return id
-        }
-      })
+      return false
     }
   }
 }

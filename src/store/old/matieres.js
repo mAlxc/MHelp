@@ -12,6 +12,7 @@ export default {
         let ref = db.collection(COLLECTION)
         let q = ref.where('id_year', '==', matiere.year).where('name', '==', matiere.name)
         q.get().then(e => {
+          console.log(e)
           if (e.size > 0) {
             resolve(false)
           } else {
