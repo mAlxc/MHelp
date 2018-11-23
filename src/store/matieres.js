@@ -6,7 +6,7 @@ const state = {
   pendingId: 0
 }
 const mutations = {
-  RESET_YEAR (state) {
+  RESET_MATIERES (state) {
     state.all = {}
     state.allNames = []
   },
@@ -63,7 +63,7 @@ const actions = {
       if (convos.size > 0) {
         convos.forEach(matieres => commit('SET_MATIERES', { matieres }))
       } else {
-        commit('RESET_YEAR')
+        commit('RESET_MATIERES')
       }
     } else {
 
