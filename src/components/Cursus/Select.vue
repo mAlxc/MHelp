@@ -1,21 +1,15 @@
 <template>
-  <v-select v-model="selection" :items="years" item-text="name" label="Période" persistent-hint return-object single-line></v-select>
+  <v-select v-model="selection" :items="items" item-text="name" label="Le cursus associée" outline return-object></v-select>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   props: ['value'],
   computed: {
-    ...mapState({
-    // arrow functions can make the code very succinct!
-      years (state) {
-        let l = []
-
-        return l
-      }
-    }),
+    ...mapGetters({items: 'cursus/all'}
+    ),
     selection: {
       get () {
         return this.value

@@ -1,9 +1,10 @@
 <template>
   <v-card>
     <v-card-title>
+      Ajouter une période
     </v-card-title>
     <v-card-text>
-      <v-text-field v-model="yearName" label="Année ex: L1" outline></v-text-field>
+      <v-text-field v-model="yearName" label="Période" placeholder="Ex: L1 ,S1, Q1, ..." outline></v-text-field>
       <select-cursus v-model="cursus" ></select-cursus>
     </v-card-text>
     <v-card-actions>
@@ -30,10 +31,10 @@ export default {
     Save () {
       if (this.cursus !== '' && this.yearName !== '') {
         this.$store
-          .dispatch('yearsBis/set', {
+          .dispatch('years/set', {val: {
             name: this.yearName,
-            cursus: this.cursus
-          })
+            id_cursus: this.cursus.id
+          }})
           .then(e => {
             this.success = true
           })

@@ -10,12 +10,12 @@ const mutations = {
     state.all = {}
     state.allNames = []
   },
-  SET_YEARS (state, { years }) {
+  SET_MATIERES (state, { matieres }) {
     if (navigator.onLine) {
-      const data = years.data()
+      const data = matieres.data()
       state.all = {
         ...state.all,
-        [years.id]: { name: data.name, id_owner: data.id_owner, id_cursus: data.id_cursus, created: data.created }
+        [matieres.id]: { name: data.name, id_owner: data.id_owner, id_year: data.id_year, created: data.created }
       }
       if (!state.allNames.includes(data.name)) {
         state.allNames.push(data.name)
@@ -24,11 +24,11 @@ const mutations = {
 
     }
   },
-  SET_YEARS_OFFLINE (state, val) {
+  SET_MATIERES_OFFLINE (state, val) {
     state.allNames.push(name)
     state.inPeding = {
       ...state.inPeding,
-      [state.pendingId++]: { name: val.name, id_cursus: val.id_cursus, created: Date.now() }
+      [state.pendingId++]: { name: val.name, id_year: val.id_year, created: Date.now() }
     }
   },
   removePending (state, id) {
@@ -58,10 +58,10 @@ const getters = {
 const actions = {
   async get ({ commit, rootState }) {
     if (navigator.onLine) {
-      let convoRef = rootState.db.collection('years').where('id_owner', '==', rootState.user.user.uid)
+      let convoRef = rootState.db.collection('matieres').where('id_owner', '==', rootState.user.user.uid)
       let convos = await convoRef.get()
       if (convos.size > 0) {
-        convos.forEach(years => commit('SET_YEARS', { years }))
+        convos.forEach(matieres => commit('SET_MATIERES', { matieres }))
       } else {
         commit('RESET_YEAR')
       }
@@ -72,12 +72,12 @@ const actions = {
   async set ({ commit, state, dispatch, rootState }, { val, created }) {
     if (navigator.onLine) {
       console.log(val)
-      const convoRef = rootState.db.collection('years')
+      const convoRef = rootState.db.collection('matieres')
       const res = await convoRef.where('name', '==', val.name).get()
       console.log(res)
       if (res.size === 0) {
         console.log('here')
-        await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_cursus: val.id_cursus, created: Date.now() })
+        await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_year: val.id_year, created: Date.now() })
           .then((e) => { console.log('good'); console.log(e); dispatch('get') })
           .catch((e) => { console.log('bad') })
         return true
@@ -85,21 +85,21 @@ const actions = {
         let isIn = false
         res.forEach(year => {
           let data = year.data()
-          if (data.id_cursus === val.id_cursus) {
+          if (data.id_year === val.id_year) {
             isIn = true
           }
         })
         if (isIn) {
           return false
         } else {
-          await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_cursus: val.id_cursus, created: created || Date.now() })
+          await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_year: val.id_year, created: created || Date.now() })
             .then((e) => { console.log('good'); console.log(e); dispatch('get') })
             .catch((e) => { console.log('bad') })
           return true
         }
       }
     } else {
-      commit('SET_YEARS_OFFLINE', val)
+      commit('SET_MATIERES_OFFLINE', val)
     }
   },
   async sync ({ commit, state, dispatch }) {

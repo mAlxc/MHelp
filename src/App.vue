@@ -24,7 +24,7 @@
     </v-navigation-drawer>
     <v-toolbar class="primaryBack" app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon>mdi-menu</v-icon></v-toolbar-side-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title class="font-weight-light">Application</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon fab @click="signOut">
         <v-icon>mdi-close-circle</v-icon>
@@ -92,11 +92,19 @@ export default {
       } else {
         this.$store.dispatch('user/setUser')
         this.$store.dispatch('initdb', db)
-        this.$store.dispatch('cursus/get')
-
-        this.$store.dispatch('matieres/aGetMatieres')
+        this.$store.dispatch('get')
         this.$router.push({name: 'home'})
       }
+    })
+
+    window.addEventListener('online', (e) => {
+      console.log(e)
+      console.log('dispatch sync all')
+      this.$store.dispatch('sync')
+    })
+    window.addEventListener('offline', (e) => {
+      console.log(e)
+      console.log('offline')
     })
   },
   mounted () {

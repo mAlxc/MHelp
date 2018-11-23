@@ -14,10 +14,10 @@ import 'vuetify/dist/vuetify.min.css'
 import store from './store'
 import VueMathjax from 'vue-mathjax'
 import {config} from './configFirebase' // Ensure you are using css-loader
-Firebase.initializeApp(config)
 // gestion de firebase
 // Initialize Firebase
-
+Firebase.initializeApp(config)
+global.db = Firebase.firestore()
 // Check before each page load whether the page requires authentication/
 // if it does check whether the user is signed into the web app or
 // redirect to the sign-in page to enable them to sign-in
@@ -63,7 +63,6 @@ new Vue({
   template: '<App/>'
 })
 // Initialize Cloud Firestore through Firebase
-global.db = Firebase.firestore()
 
 // Disable deprecated features
 // eslint-disable-next-line

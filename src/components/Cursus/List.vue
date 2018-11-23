@@ -2,6 +2,9 @@
   <v-layout>
     <v-flex>
       <v-card v-if="items.length>0">
+        <v-card-title>
+          List des cursus disponible
+        </v-card-title>
         <v-list two-line>
           <template v-for="(item, index) in items">
             <v-list-tile :key="item.id" avatar ripple @click="toggle(index)">
@@ -41,16 +44,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({items: 'years/all'}),
-    items () {
-      let l = []
-      if (this.years) {
-        this.years.forEach(element => {
-          l.push(element)
-        })
-      }
-      return l
-    }
+    ...mapGetters({items: 'cursus/all'})
   },
   methods: {
     toggle (index) {
