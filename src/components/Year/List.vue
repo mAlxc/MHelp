@@ -41,16 +41,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({items: 'years/all'}),
-    items () {
-      let l = []
-      if (this.years) {
-        this.years.forEach(element => {
-          l.push(element)
-        })
-      }
-      return l
-    }
+    ...mapGetters({items: 'years/all'})
   },
   methods: {
     toggle (index) {
