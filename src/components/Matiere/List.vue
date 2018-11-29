@@ -54,7 +54,6 @@ export default {
       console.log(this.matieres)
       if (this.matieres) {
         this.matieres.forEach(mat => {
-          console.log(mat)
           let i = { name: mat.name,
             id: mat.id,
             icon: mat.icon,
@@ -80,8 +79,6 @@ export default {
     }
   },
   created () {
-    console.log(this.matieres)
-    console.log(this.items)
   }
 }
 </script>

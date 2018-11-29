@@ -52,6 +52,12 @@ const getters = {
       }
     }
     return t
+  },
+  getNameById: (state) => (id) => {
+    if (state.all[id]) {
+      return state.all[id].name
+    }
+    return false
   }
 }
 
@@ -71,15 +77,12 @@ const actions = {
   },
   async set ({ commit, state, dispatch, rootState }, { val, created }) {
     if (navigator.onLine) {
-      console.log(val)
       const convoRef = rootState.db.collection('years')
       const res = await convoRef.where('name', '==', val.name).get()
-      console.log(res)
       if (res.size === 0) {
-        console.log('here')
         await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_cursus: val.id_cursus, created: Date.now() })
-          .then((e) => { console.log('good'); console.log(e); dispatch('get') })
-          .catch((e) => { console.log('bad') })
+          .then((e) => { console.info('good'); dispatch('get') })
+          .catch((e) => { console.warn('bad') })
         return true
       } else {
         let isIn = false
@@ -93,8 +96,8 @@ const actions = {
           return false
         } else {
           await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_cursus: val.id_cursus, created: created || Date.now() })
-            .then((e) => { console.log('good'); console.log(e); dispatch('get') })
-            .catch((e) => { console.log('bad') })
+            .then((e) => { console.info('good'); dispatch('get') })
+            .catch((e) => { console.warn('bad') })
           return true
         }
       }
@@ -103,15 +106,12 @@ const actions = {
     }
   },
   async sync ({ commit, state, dispatch }) {
-    console.log('ebut sync')
     if (navigator.onLine) {
-      console.log('ebut sync')
       for (const key in state.inPeding) {
         if (state.inPeding.hasOwnProperty(key)) {
           const element = state.inPeding[key]
           dispatch('set', { val: element.name, created: element.created })
             .then(bo => {
-              console.log(bo)
               commit('removePending', key)
             })
         }

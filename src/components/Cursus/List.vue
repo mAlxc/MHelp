@@ -3,7 +3,7 @@
     <v-flex>
       <v-card v-if="items.length>0">
         <v-card-title>
-          List des cursus disponible
+          <h1>Liste des cursus disponible</h1> ( Les cursus sont generalisé)
         </v-card-title>
         <v-list two-line>
           <template v-for="(item, index) in items">
@@ -14,7 +14,7 @@
               @click="toggle(index)">
               <v-list-tile-content>
                 <v-list-tile-title>{{ item.name }}</v-list-tile-title>
-                <v-list-tile-sub-title v-if="item.countFi>0">years associées : {{ item.countMat }}</v-list-tile-sub-title>
+                <v-list-tile-sub-title v-if="item.countFi>0">Periodes associées : {{ item.countMat }}</v-list-tile-sub-title>
                 <v-list-tile-sub-title>
                   Crée le {{item.created.toLocaleDateString("Fr-fr",{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}}
                 </v-list-tile-sub-title>
@@ -66,7 +66,6 @@ export default {
     }
   },
   created () {
-    console.log(this.items)
   }
 }
 </script>
