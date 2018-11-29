@@ -42,13 +42,13 @@ const getters = {
     for (const key in state.all) {
       if (state.all.hasOwnProperty(key)) {
         const element = state.all[key]
-        t.push({ id: key, name: element.name, created: element.created })
+        t.push({ id: key, name: element.name, id_cursus: element.id_cursus, created: new Date(element.created) })
       }
     }
     for (const key in state.inPeding) {
       if (state.inPeding.hasOwnProperty(key)) {
         const element = state.inPeding[key]
-        t.push({ id: key, name: element.name, created: element.created })
+        t.push({ id: key, name: element.name, id_cursus: element.id_cursus, created: new Date(element.created) })
       }
     }
     return t

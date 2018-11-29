@@ -42,16 +42,28 @@ const getters = {
     for (const key in state.all) {
       if (state.all.hasOwnProperty(key)) {
         const element = state.all[key]
-        t.push({id: key, name: element.name, created: element.created})
+        t.push({id: key, name: element.name, created: new Date(element.created)})
       }
     }
     for (const key in state.inPeding) {
       if (state.inPeding.hasOwnProperty(key)) {
         const element = state.inPeding[key]
-        t.push({id: key, name: element.name, created: element.created})
+        t.push({id: key, name: element.name, created: new Date(element.created)})
       }
     }
     return t
+  },
+  /**
+   * Permet de recuper le nom d'un cursus par son id
+   * @param {Vuex.state} state Vuex State
+   * @param {String} id id du cursus a selectionner
+   * @returns  {String|false} le nom du cursus ou false
+   */
+  getNameById: (state) => (id) => {
+    if (state.all[id]) {
+      return state.all[id].name
+    }
+    return false
   }
 }
 
