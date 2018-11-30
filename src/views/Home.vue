@@ -1,15 +1,7 @@
 <template>
   <v-layout column pa-2>
-    <v-flex tag="h2">
-      Home
-    </v-flex>
-    <v-flex mt-2>
-      <new-cursus></new-cursus>
-      <c-list></c-list>
-    </v-flex>
-    <v-flex mt-2>
-      <new-year></new-year>
-      <y-liste></y-liste>
+    <v-flex>
+      too
     </v-flex>
   </v-layout>
 </template>

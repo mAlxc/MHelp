@@ -33,7 +33,8 @@ export default {
         this.$store
           .dispatch('years/set', {val: {
             name: this.yearName,
-            id_cursus: this.cursus.id
+            id_cursus: this.cursus.id,
+            id_owner: this.$store.state.user.user.uid
           }})
           .then(e => {
             this.success = true

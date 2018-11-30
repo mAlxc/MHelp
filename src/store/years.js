@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 const state = {
   all: {},
   allNames: [], // indexation des names afin de ne pas dupliquer
@@ -6,6 +8,13 @@ const state = {
   pendingId: 0
 }
 const mutations = {
+  togglefav (state, id) {
+    if (state.all[id]) {
+      Vue.set(state.all[id], 'fav', !state.all[id].fav)
+    } else if (state.inPeding[id]) {
+      Vue.set(state.inPeding[id], 'fav', !state.inPeding[id].fav)
+    }
+  },
   RESET_YEAR (state) {
     state.all = {}
     state.allNames = []
@@ -15,7 +24,7 @@ const mutations = {
       const data = years.data()
       state.all = {
         ...state.all,
-        [years.id]: { name: data.name, id_owner: data.id_owner, id_cursus: data.id_cursus, created: data.created }
+        [years.id]: { name: data.name, id_owner: data.id_owner, id_cursus: data.id_cursus, created: data.created, fav: data.fav }
       }
       if (!state.allNames.includes(data.name)) {
         state.allNames.push(data.name)
@@ -25,10 +34,37 @@ const mutations = {
     }
   },
   SET_YEARS_OFFLINE (state, val) {
-    state.allNames.push(name)
-    state.inPeding = {
-      ...state.inPeding,
-      [state.pendingId++]: { name: val.name, id_cursus: val.id_cursus, created: Date.now() }
+    let is = state.allNames.includes(val.name)
+    if (!is) {
+      state.allNames.push(val.name)
+      state.inPeding = {
+        ...state.inPeding,
+        [state.pendingId++]: { name: val.name, id_cursus: val.id_cursus, created: Date.now() }
+      }
+    } else {
+      let isIn = false
+      for (const key in state.all) {
+        if (state.all.hasOwnProperty(key)) {
+          const element = state.all[key]
+          if (element.id_cursus === val.id_cursus) {
+            isIn = true
+          }
+        }
+      }
+      for (const key in state.inPeding) {
+        if (state.inPeding.hasOwnProperty(key)) {
+          const element = state.inPeding[key]
+          if (element.id_cursus === val.id_cursus) {
+            isIn = true
+          }
+        }
+      }
+      if (!isIn) {
+        state.inPeding = {
+          ...state.inPeding,
+          [state.pendingId++]: { name: val.name, id_cursus: val.id_cursus, created: Date.now() }
+        }
+      }
     }
   },
   removePending (state, id) {
@@ -42,13 +78,14 @@ const getters = {
     for (const key in state.all) {
       if (state.all.hasOwnProperty(key)) {
         const element = state.all[key]
-        t.push({ id: key, name: element.name, id_cursus: element.id_cursus, created: new Date(element.created) })
+        console.log(element)
+        t.push({ id: key, name: element.name, id_cursus: element.id_cursus, created: new Date(element.created), fav: element.fav })
       }
     }
     for (const key in state.inPeding) {
       if (state.inPeding.hasOwnProperty(key)) {
         const element = state.inPeding[key]
-        t.push({ id: key, name: element.name, id_cursus: element.id_cursus, created: new Date(element.created) })
+        t.push({ id: key, name: element.name, id_cursus: element.id_cursus, created: new Date(element.created), fav: element.fav })
       }
     }
     return t
@@ -62,6 +99,19 @@ const getters = {
 }
 
 const actions = {
+  togglefav ({ state, dispatch, commit }, index) {
+    console.log(index)
+    if (navigator.onLine) {
+      commit('togglefav', index)
+      if (state.all[index]) {
+        dispatch('set', { val: state.all[index] })
+      } else if (state.inPeding[index]) {
+        dispatch('sync')
+      }
+    } else {
+      commit('togglefav', index)
+    }
+  },
   async get ({ commit, rootState }) {
     if (navigator.onLine) {
       let convoRef = rootState.db.collection('years').where('id_owner', '==', rootState.user.user.uid)
@@ -80,7 +130,7 @@ const actions = {
       const convoRef = rootState.db.collection('years')
       const res = await convoRef.where('name', '==', val.name).get()
       if (res.size === 0) {
-        await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_cursus: val.id_cursus, created: Date.now() })
+        await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_cursus: val.id_cursus, created: Date.now(), fav: false })
           .then((e) => { console.info('good'); dispatch('get') })
           .catch((e) => { console.warn('bad') })
         return true
@@ -88,14 +138,24 @@ const actions = {
         let isIn = false
         res.forEach(year => {
           let data = year.data()
-          if (data.id_cursus === val.id_cursus) {
+          if ((data.id_cursus === val.id_cursus) && (data.id_owner === rootState.user.user.uid)) {
+            console.log('fail')
             isIn = true
+            console.log(val)
+            val.id_owner = rootState.user.user.uid
+            val.update = Date.now()
+            console.log(year)
+            convoRef.doc(year.id).set(val)
+              .then((e) => { console.info('good'); dispatch('get') })
+              .catch((e) => { console.warn('bad') })
+            return true
           }
         })
         if (isIn) {
+          console.log('double fail')
           return false
         } else {
-          await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_cursus: val.id_cursus, created: created || Date.now() })
+          await convoRef.doc().set({ name: val.name, id_owner: rootState.user.user.uid, id_cursus: val.id_cursus, created: (created || Date.now()), fav: false })
             .then((e) => { console.info('good'); dispatch('get') })
             .catch((e) => { console.warn('bad') })
           return true
@@ -110,7 +170,7 @@ const actions = {
       for (const key in state.inPeding) {
         if (state.inPeding.hasOwnProperty(key)) {
           const element = state.inPeding[key]
-          dispatch('set', { val: element.name, created: element.created })
+          dispatch('set', { val: element, created: element.created })
             .then(bo => {
               commit('removePending', key)
             })

@@ -6,9 +6,15 @@ import matieres from './matieres'
 // import years from './old/years'
 import user from './old/user'
 import cursus from './cursus'
+import userData from './userData'
 import years from './years'
-import createPersistedState from 'vuex-persistedstate'
+// import createPersistedState from 'vuex-persistedstate'
+
+import createEasyFirestore from 'vuex-easy-firestore'
+
 Vue.use(Vuex)
+
+const easyFirestore = createEasyFirestore([cursus, userData], {logging: true})
 
 export default new Vuex.Store({
   state: {
@@ -44,35 +50,36 @@ export default new Vuex.Store({
     definitions,
     matieres,
     user,
-    cursus,
     years
   },
-  plugins: [
-    createPersistedState({
-      key: 'Fiches',
-      storage: localStorage,
-      paths: [],
-      reducer: state => {
-        const obj = {
-          definitions: state.definitions,
-          matieres: {
-            all: state.matieres.all,
-            inPeding: state.matieres.inPeding,
-            pendingId: state.matieres.pendingId
-          },
-          years: {
-            all: state.years.all,
-            inPeding: state.years.inPeding,
-            pendingId: state.years.pendingId
-          },
-          cursus: {
-            all: state.cursus.all,
-            inPeding: state.cursus.inPeding,
-            pendingId: state.cursus.pendingId
-          }
-        }
-        return obj
-      }
-    })
+  plugins: [easyFirestore
   ]
 })
+
+/*
+let persistData = createPersistedState({
+  key: 'Fiches',
+  storage: localStorage,
+  paths: [],
+  reducer: state => {
+    const obj = {
+      definitions: state.definitions,
+      matieres: {
+        all: state.matieres.all,
+        inPeding: state.matieres.inPeding,
+        pendingId: state.matieres.pendingId
+      },
+      years: {
+        all: state.years.all,
+        inPeding: state.years.inPeding,
+        pendingId: state.years.pendingId
+      },
+      cursus: {
+        all: state.cursus.all,
+        inPeding: state.cursus.inPeding,
+        pendingId: state.cursus.pendingId
+      }
+    }
+    return obj
+  }
+}) */

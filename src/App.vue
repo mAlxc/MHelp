@@ -86,7 +86,7 @@ export default {
     }
   },
   created () {
-    fireabse.auth().onAuthStateChanged(a => {
+    /* fireabse.auth().onAuthStateChanged(a => {
       if (a === null) {
         this.$router.push({name: 'signIn'})
       } else {
@@ -95,8 +95,18 @@ export default {
         this.$store.dispatch('get')
         this.$router.push({name: 'home'})
       }
-    })
+    }) */
 
+    // Be sure to initialise Firebase first
+    fireabse.auth().onAuthStateChanged(user => {
+      if (user) {
+        // user is logged in
+        this.$store.dispatch('cursus/openDBChannel').catch(console.error)
+      } else {
+        this.$store.dispatch('cursus/closeDBChannel').catch()
+      }
+    })
+    /*
     window.addEventListener('online', (e) => {
       console.log(e)
       console.log('dispatch sync all')
@@ -105,7 +115,7 @@ export default {
     window.addEventListener('offline', (e) => {
       console.log(e)
       console.log('offline')
-    })
+    }) */
   },
   mounted () {
   }

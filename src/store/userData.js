@@ -1,8 +1,8 @@
 export default {
-  firestorePath: 'cursus/{userId}/data',
+  firestorePath: 'users/{userId}/data',
   firestoreRefType: 'collection', // or 'doc'
-  moduleName: 'cursus',
-  statePropName: ''
+  moduleName: 'userData',
+  statePropName: 'docs'
   // you can also add state/getters/mutations/actions
   // for other config like fillables see 'Extra features'
 
