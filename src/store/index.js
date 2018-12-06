@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import fiches from './old/fiches'
-import definitions from './old/definitions'
-import matieres from './matieres'
+// import fiches from './old/fiches'
+// import definitions from './old/definitions'
+// import matieres from './matieres'
 // import years from './old/years'
-import user from './old/user'
+// import user from './old/user'
 import cursus from './cursus'
 import userData from './userData'
-import years from './years'
+// import years from './years'
 // import createPersistedState from 'vuex-persistedstate'
 
 import createEasyFirestore from 'vuex-easy-firestore'
@@ -45,13 +45,7 @@ export default new Vuex.Store({
       state.db = val
     }
   },
-  modules: {
-    fiches,
-    definitions,
-    matieres,
-    user,
-    years
-  },
+  modules: { },
   plugins: [easyFirestore
   ]
 })

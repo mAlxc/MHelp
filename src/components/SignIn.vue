@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import Firebase from 'firebase'
 export default {
   data: function () {
     return {
@@ -32,14 +33,22 @@ export default {
   },
   methods: {
     signIn: function () {
-      this.$store.dispatch('user/login', {email: this.email, password: this.password})
+      Firebase.auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(
+          infoCo => {
+            console.log(infoCo)
+          },
+          error => {
+            alert(error.message)
+          }
+        )
     },
     signUp: function () {
       this.$router.push({name: 'signUp'})
     }
   },
   beforeRouteLeave (to, from, next) {
-    console.log('to', to, 'from', from)
     next()
     // called when the route that renders this component is about to
     // be navigated away from.

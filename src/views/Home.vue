@@ -1,7 +1,8 @@
 <template>
   <v-layout column pa-2>
     <v-flex>
-      too
+      {{$store.state.user.user}}
+      {{$store.state.cursus.cursus}}
     </v-flex>
   </v-layout>
 </template>

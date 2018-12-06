@@ -28,7 +28,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -36,7 +35,9 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({ items: 'cursus/all' })
+    items () {
+      return this.$store.state.cursus.cursus.list
+    }
   },
   methods: {
     toggle (index) {
